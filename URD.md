@@ -65,3 +65,54 @@ This platform aims to serve as a comprehensive solution for competitive programm
 - **Non-Functional Requirement**: Forums should be moderated to prevent spam, and discussions should be organized logically based on problem tags, difficulty, and recent activity.
 
 ---
+
+## **4. System Requirements**
+
+### **4.1 Usability**
+
+- **Requirement**: The platform must provide an intuitive and user-friendly interface, ensuring that even new users can navigate the site with ease.
+  
+- **Evaluation**: User feedback and usability tests will be used to evaluate the platform’s design.
+
+### **4.2 Performance**
+
+- **Requirement**: The platform must be able to handle a large number of concurrent users, especially during contests, without significant latency or downtime.
+  
+- **Evaluation**: Performance tests and load tests will be conducted to ensure scalability.
+
+### **4.3 Security**
+
+- **Requirement**: User data, including personal profiles and code submissions, must be securely stored and transmitted. The system must prevent unauthorized access and guard against common security vulnerabilities such as SQL injections and cross-site scripting (XSS).
+  
+- **Evaluation**: Regular security audits will be performed.
+
+### **4.4 Reliability**
+
+- **Requirement**: The platform should be available 99.9% of the time, especially during active contests. In case of unexpected downtime, the platform must provide a reliable method for contest resumption.
+  
+- **Evaluation**: Monitoring tools will track system uptime, and redundancy mechanisms will ensure continuity of service.
+
+---
+
+## **5. User Interface Requirements**
+
+### **5.1 Contest Page**
+- A contest page where users can view problems, submit code, and monitor their submissions in real-time.
+- The page must display time remaining for the contest and update the leaderboard.
+
+### **5.2 Code Editor**
+- The code editor should support syntax highlighting, auto-indentation, and error checking for multiple programming languages.
+
+### **5.3 Leaderboard**
+- A clear display of rankings during and after contests, with filtering options based on user, country, and organization.
+
+### **5.4 Discussion Forum**
+- An organized structure for discussions, with thread creation and tagging features.
+
+---
+
+## **6. Constraints**
+
+- **Scalability**: The platform must scale efficiently to handle thousands of simultaneous users during contests without compromising performance.
+- **Cross-browser Compatibility**: The platform should work seamlessly across different web browsers (Chrome, Firefox, Safari, etc.).
+- **Mobile Support**: A mobile-friendly version of the platform should be available, allowing users to participate in contests and browse problems from their mobile devices.
