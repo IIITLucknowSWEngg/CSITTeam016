@@ -1,7 +1,3 @@
-Here is an extended version of your **Software Requirements Specification (SRS) - Codeforces Clone** document, along with a figure and more elaborated content.
-
----
-
 # **Software Requirements Specification (SRS) - Codeforces Clone**
 
 ## **1. Introduction**
