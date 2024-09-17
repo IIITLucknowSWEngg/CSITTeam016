@@ -1,6 +1,6 @@
-# Team InnovateCS
+# Team Name : InnovateCS
 
-## CSITTeam016
+# Team Number : CSITTeam016
 
 | Name                | Roll Number  | Email Address                      |
 |---------------------|--------------|------------------------------------|
