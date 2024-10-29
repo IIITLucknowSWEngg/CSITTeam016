@@ -1,94 +1,267 @@
-# **Software Requirements Specification (SRS) - Codeforces Clone**
+# Software Requirements Specification (SRS)
+## CodeForces Arena Platform v1.0
 
-## **1. Introduction**
-The Software Requirements Specification (SRS) document outlines the essential functionalities and performance criteria for the development of a **Codeforces Clone**, a competitive programming platform designed for hosting coding contests. The platform will provide users with the ability to solve algorithmic problems, submit code, and receive automated feedback in real-time. The objective is to build a system capable of handling a large user base, including students, professionals, and competitive programmers. 
+<div align="center">
 
-### **Key Features:**
-- **Real-time Contests**: Allow users to compete in timed programming challenges.
-- **Automatic Grading**: Evaluate code submissions instantly against predefined test cases.
-- **Rankings and Prizes**: Reward users based on their performance, with a leaderboard that ranks users and prizes for top participants.
+![Version](https://img.shields.io/badge/Version-1.0-blue)
+![Status](https://img.shields.io/badge/Status-Draft-orange)
+![Date](https://img.shields.io/badge/Last%20Updated-October%202024-green)
 
-### **Vision**:
-The vision is to create a robust and scalable platform that motivates competitive programmers to excel by rewarding the top performers and providing a friendly yet challenging coding environment. Unlike traditional platforms, our system will offer **customized contest formats**, **prizes**, and **real-time feedback** that foster an engaging learning experience.
-
-### **Scope**:
-The platform will serve both individual and group participants, offering various contest types, programming languages, and integration with third-party tools like GitHub for authentication. Future versions will include support for **team-based competitions**, **multiple contest formats** (e.g., hackathons), and **custom problem creation** by users.
-
-## **2. Functional Requirements**
-
-### **2.1 User Registration and Authentication**
-- **Description**: Users must register using their email, GitHub, or Google accounts. They will be able to log in using their registered credentials securely.
-- **Input**: Registration form (username, email, password) or social authentication tokens.
-- **Output**: Successful account creation, email confirmation, or social login confirmation.
-- **Security Considerations**: Encrypted passwords and OAuth 2.0 for third-party login integrations.
-
-![User Authentication Flow](https://example.com/user-auth-flow.png)
-
-### **2.2 Contest Management**
-- **Description**: Admins can create, schedule, and manage contests of varying difficulty. Users will participate and solve problems within the time limits.
-- **Input**: Contest details like title, start and end times, problem sets, and difficulty levels.
-- **Output**: Published contests ready for participation.
-- **Features**:
-  - **Multiple Problem Types**: Easy, Medium, Hard.
-  - **Live Contest Monitoring**: Admins can monitor participants in real-time.
-  - **Contest Announcements**: Automated notifications sent before contest begins.
-
-### **2.3 Code Submission and Evaluation**
-- **Description**: The system will allow users to submit code solutions which are then evaluated against predefined test cases. Results will be displayed immediately.
-- **Input**: User-submitted code in supported languages (e.g., C++, Python, Java).
-- **Output**: Real-time feedback, pass/fail status, and performance metrics (execution time, memory usage).
-- **Evaluation System**:
-  - **Automated Grading**: Uses a sandbox to run code and check against multiple test cases.
-  - **Feedback**: Users will receive both pass/fail results and detailed error explanations when possible.
-  - **Code Limits**: Restrict submission size and execution time to avoid overload.
-
-### **2.4 Leaderboard**
-- **Description**: The leaderboard will display real-time rankings based on user performance, factoring in both the accuracy and speed of problem-solving.
-- **Output**: A dynamic list of ranked participants, which updates as users submit solutions.
-- **Ranking Algorithm**:
-  - **Scoring**: Based on the number of problems solved and the time taken.
-  - **Tiebreakers**: Solving time is used as a tiebreaker when participants have solved the same number of problems.
-
-### **2.5 Prize Distribution System**
-- **Description**: Users who achieve top positions in the leaderboard will receive rewards.
-- **Input**: Leaderboard rankings at the end of each contest.
-- **Output**: Automated email notifications and prize credits to winning participants.
-- **Features**:
-  - **Types of Prizes**: Digital gift cards, certifications, and badges.
-  - **Eligibility**: Top 3 or top 10 based on the contest rules.
-  - **Prize Redemption**: Users can claim their prizes through the platform.
-
-## **3. Non-Functional Requirements (NFRs)**
-
-### **3.1 Performance**
-- The platform should handle high traffic, supporting up to **10,000 concurrent users** during peak contest times without delays or crashes.
-- **Load Testing**: Conduct stress tests to ensure performance under heavy loads.
-- **Latency**: The system must maintain response times of less than 1 second for all major functionalities (e.g., code submission, leaderboard updates).
-
-### **3.2 Scalability**
-- The system architecture must be horizontally scalable, allowing for **increased user capacity** and additional resources (e.g., servers) as user demand grows.
-- **Cloud Infrastructure**: Consider AWS or Google Cloud for automatic scaling.
-
-### **3.3 Security**
-- Implement strong security measures, including **password encryption** and **HTTPS** for secure data transmission.
-- **Data Privacy**: Ensure that user information is securely stored and only accessible by authorized personnel.
-- **OWASP Compliance**: Regular audits to check for vulnerabilities like SQL injection and cross-site scripting.
-
-### **3.4 Usability**
-- The platform must provide an **intuitive user interface** with easy navigation and **mobile responsiveness**.
-- **Accessibility**: Ensure the platform is accessible for users with disabilities (WCAG 2.1 compliance).
-- **User Onboarding**: Provide new users with tutorials and onboarding tips to get started with the platform.
-
-### **3.5 Availability**
-- Ensure **99.9% uptime** during contest periods with automatic failover and recovery mechanisms to handle unexpected downtimes.
-- **Backup Systems**: Daily backups of the database and contest results to prevent data loss.
-
-### **3.6 Extensibility**
-- The platform’s design must be modular to accommodate new features such as **additional programming languages** (e.g., Rust, Go), new types of contests (e.g., **team-based contests**), and **custom problem creation** by users.
-- **Plugin Support**: Allow developers to create third-party plugins or tools that can extend the functionality of the platform.
-
-### **3.7 Documentation**
-- Comprehensive **API documentation** for developers to interact with the platform’s functionalities.
-- **User Manuals**: Provide detailed manuals for both end-users and administrators to navigate and manage the platform.
+</div>
 
 
+
+## Table of Contents
+1. [Introduction](#1-introduction)
+2. [System Overview](#2-system-overview)
+3. [Functional Requirements](#3-functional-requirements)
+4. [Non-Functional Requirements](#4-non-functional-requirements)
+5. [System Constraints](#5-system-constraints)
+6. [Appendix](#6-appendix)
+
+## 1. Introduction
+
+### 1.1 Purpose
+The CodeForces Arena platform aims to revolutionize competitive programming by providing a robust, scalable, and user-friendly environment for programmers to enhance their algorithmic problem-solving skills. This document outlines the comprehensive requirements for building this platform.
+
+### 1.2 Project Scope
+The platform will serve as a complete ecosystem for:
+- Conducting real-time programming contests
+- Automated code evaluation
+- Performance tracking and ranking
+- Community interaction and learning
+- Contest management and administration
+
+### 1.3 System Context
+
+```mermaid
+graph TB
+    A[Users/Contestants] --> B[Platform Interface]
+    B --> C[Contest System]
+    B --> D[Judge System]
+    B --> E[User Management]
+    C --> F[Database]
+    D --> F
+    E --> F
+```
+
+## 2. System Overview
+
+### 2.1 Core Components
+
+```mermaid
+graph LR
+    A[Web Interface] --> B[Application Server]
+    B --> C[Contest Engine]
+    B --> D[Judge System]
+    B --> E[Database]
+    B --> F[Authentication]
+```
+
+### 2.2 Key Features
+
+1. **Contest Management System**
+   - Real-time contest hosting
+   - Multiple contest formats
+   - Automated scheduling
+   - Result compilation
+   - Editorial management
+
+2. **User Management System**
+   - Profile management
+   - Rating system
+   - Progress tracking
+   - Achievement system
+   - Social features
+
+3. **Problem Management**
+   - Problem bank
+   - Test case management
+   - Difficulty classification
+   - Topic categorization
+   - Solution verification
+
+## 3. Functional Requirements
+
+### 3.1 User Authentication & Authorization
+
+```mermaid
+sequenceDiagram
+    User->>Frontend: Login Request
+    Frontend->>Auth Service: Validate Credentials
+    Auth Service->>Database: Verify User
+    Database->>Auth Service: User Data
+    Auth Service->>Frontend: Auth Token
+    Frontend->>User: Access Granted
+```
+
+#### Detailed Requirements:
+1. **Registration Process**
+   - Email verification required
+   - Username must be unique
+   - Password requirements:
+     - Minimum 8 characters
+     - At least 1 uppercase letter
+     - At least 1 number
+     - At least 1 special character
+   - OAuth support for Google and GitHub
+
+2. **Authentication Features**
+   - JWT-based authentication
+   - Session management
+   - Password reset functionality
+   - 2FA support (optional)
+   - Remember me functionality
+
+### 3.2 Contest System
+
+#### Contest States
+```mermaid
+stateDiagram-v2
+    [*] --> Pending
+    Pending --> Running: Start Time
+    Running --> Ended: End Time
+    Ended --> Closed: Results Published
+```
+
+#### Contest Requirements:
+1. **Contest Creation**
+   - Title and description
+   - Start and end time
+   - Problem set selection
+   - Scoring rules
+   - Visibility settings (public/private)
+
+2. **During Contest**
+   - Real-time scoreboard
+   - Announcement system
+   - Problem statement access
+   - Code submission
+   - Clarification requests
+
+3. **Post Contest**
+   - Final rankings
+   - Editorial access
+   - Solution viewing
+   - Rating updates
+   - Certificate generation
+
+### 3.3 Code Evaluation System
+
+```mermaid
+graph TD
+    A[Submit Code] --> B{Language Check}
+    B --> |Valid| C[Compile]
+    B --> |Invalid| F[Error]
+    C --> D[Run Tests]
+    D --> E[Generate Result]
+```
+
+#### Evaluation Process:
+1. **Submission Handling**
+   - Support for multiple languages
+   - Code size limitations
+   - Syntax verification
+   - Plagiarism check
+
+2. **Testing Process**
+   - Compile time limit: 10 seconds
+   - Runtime limit: 2 seconds per test case
+   - Memory limit: 256MB
+   - Output size limit: 64MB
+
+## 4. Non-Functional Requirements
+
+### 4.1 Performance Requirements
+
+| Metric | Normal Load | Peak Load |
+|--------|-------------|-----------|
+| Page Load Time | < 2 seconds | < 4 seconds |
+| API Response Time | < 500ms | < 1 second |
+| Concurrent Users | 5,000 | 10,000 |
+| Database Queries | 1000/second | 2000/second |
+
+### 4.2 Security Requirements
+
+1. **Data Protection**
+   - HTTPS encryption
+   - SQL injection prevention
+   - XSS protection
+   - CSRF protection
+   - Rate limiting
+
+2. **System Security**
+   - Regular security audits
+   - Automated vulnerability scanning
+   - Secure password storage (bcrypt)
+   - Session management
+   - Access control lists
+
+### 4.3 Reliability Requirements
+
+1. **Availability**
+   - 99.9% uptime guarantee
+   - Automated backups
+   - Disaster recovery plan
+   - Failover mechanisms
+
+2. **Error Handling**
+   - Graceful degradation
+   - User-friendly error messages
+   - Error logging and monitoring
+   - Automated error reporting
+
+## 5. System Constraints
+
+### 5.1 Technical Constraints
+1. **Infrastructure**
+   - Cloud-based deployment (AWS/GCP)
+   - Container orchestration (Kubernetes)
+   - CI/CD pipeline requirements
+   - Monitoring systems
+
+2. **Development**
+   - Backend: Node.js/Express
+   - Frontend: React.js
+   - Database: PostgreSQL
+   - Cache: Redis
+   - Message Queue: RabbitMQ
+
+### 5.2 Business Constraints
+1. **Timeline**
+   - MVP: 4 months
+   - Beta testing: 2 months
+   - Full release: 6 months
+
+2. **Resource Constraints**
+   - Development team: 6 members
+   - Infrastructure budget: $X/month
+   - Third-party service limitations
+
+## 6. Appendix
+
+### 6.1 Terminology
+
+| Term | Definition |
+|------|------------|
+| Contest | Time-bound programming competition |
+| Submission | Solution submitted by a user |
+| Verdict | Result of code evaluation |
+| Rating | User's performance metric |
+| Editorial | Official solution explanation |
+
+### 6.2 References
+1. IEEE 830-1998 SRS Guidelines
+2. SWEBOK v4.0 Requirements Analysis
+3. ISO/IEC/IEEE 29148:2018
+4. [Codeforces Platform](https://codeforces.com)
+5. [ICPC Competition Rules](https://icpc.global)
+
+---
+
+<div align="center">
+
+*Documented by Team InnovateCS*  
+IIIT Lucknow - Software Engineering Project 2024
+
+</div>
