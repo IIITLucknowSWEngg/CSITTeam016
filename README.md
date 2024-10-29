@@ -84,7 +84,7 @@ Each team member has made their initial contributions to the repository. You can
 ## 📝 License
 This project is MIT licensed - see the [LICENSE](LICENSE) file for details.
 
----
+
 <div align="center">
 Made with ❤️ by Team InnovateCS at IIIT Lucknow
 </div>
