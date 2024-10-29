@@ -78,7 +78,7 @@
 ## 📋 Project Overview
 
 ### Project Title
-**Upsolve** : Codforces Clone
+**Upsolve** : Codeforces Clone
 
 ### Description
 The project aims to create a CodeForces-like competitive programming platform, providing users with the experience of algorithmic problem-solving in a controlled and gamified environment. The platform enables users to participate in contests, view problem archives, and track personal progress, focusing on accessible, high-performance web design.
