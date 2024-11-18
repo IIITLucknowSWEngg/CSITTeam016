@@ -1,5 +1,5 @@
 # Software Requirements Specification (SRS)
-## CodeForces Arena Platform v1.0
+## Upsolve v1.0
 
 <div align="center">
 
@@ -22,7 +22,7 @@
 ## 1. Introduction
 
 ### 1.1 Purpose
-The CodeForces Arena platform aims to revolutionize competitive programming by providing a robust, scalable, and user-friendly environment for programmers to enhance their algorithmic problem-solving skills. This document outlines the comprehensive requirements for building this platform.
+Upsolve platform aims to revolutionize competitive programming by providing a robust, scalable, and user-friendly environment for programmers to enhance their algorithmic problem-solving skills. This document outlines the comprehensive requirements for building this platform.
 
 ### 1.2 Project Scope
 The platform will serve as a complete ecosystem for:
