@@ -1,5 +1,5 @@
 # User Requirements Document (URD)
-## CompeteCode: A Modern Competitive Programming Platform
+## Upsolve: A Modern Competitive Programming Platform
 ### Version 1.0 | October 2024
 
 ![Document Status](https://img.shields.io/badge/Status-Draft-yellow.svg) ![Version](https://img.shields.io/badge/Version-1.0-blue.svg)
@@ -8,7 +8,7 @@
 
 ## Executive Summary
 
-CompeteCode aims to revolutionize the competitive programming landscape by providing a robust, scalable platform that combines the rigor of algorithmic challenges with the engagement of a vibrant community. Drawing inspiration from successful platforms like Codeforces, LeetCode, and HackerRank, CompeteCode addresses the growing demand for high-quality programming practice and assessment tools.
+Upsolve aims to revolutionize the competitive programming landscape by providing a robust, scalable platform that combines the rigor of algorithmic challenges with the engagement of a vibrant community. Drawing inspiration from successful platforms like Codeforces, LeetCode, and HackerRank, CompeteCode addresses the growing demand for high-quality programming practice and assessment tools.
 
 ---
 
@@ -16,7 +16,7 @@ CompeteCode aims to revolutionize the competitive programming landscape by provi
 
 ### 1.1 Purpose and Scope
 
-This URD outlines the comprehensive requirements for CompeteCode, a next-generation competitive programming platform. The document serves as the foundation for system design, development, and validation, ensuring alignment between stakeholder needs and platform capabilities.
+This URD outlines the comprehensive requirements for Upsolve, a next-generation competitive programming platform. The document serves as the foundation for system design, development, and validation, ensuring alignment between stakeholder needs and platform capabilities.
 
 **Key Objectives:**
 - Create a reliable platform for hosting real-time programming contests
