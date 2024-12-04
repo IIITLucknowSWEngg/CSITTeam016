@@ -107,3 +107,22 @@
 - **C**: Consulted (provides input)
 - **I**: Informed (kept up-to-date)
 
+
+
+## Power Interest Grid
+
+| Power Level | Low Interest | Medium Interest | High Interest |
+|-------------|--------------|-----------------|---------------|
+| **High Power** | - | Sponsors | Administrators, Developers |
+| **Medium Power** | Open Source Contributors | Event Organizers, System Administrators | Educational Institutions, Mentors/Coaches |
+| **Low Power** | General Public | Competitive Programmers | - |
+
+### Engagement Strategies
+
+| Power-Interest Quadrant | Stakeholders | Engagement Strategy |
+|-------------------------|--------------|---------------------|
+| High Power, High Interest | Administrators, Developers | Actively manage and closely collaborate |
+| High Power, Low Interest | Sponsors | Keep satisfied with periodic updates |
+| Low Power, High Interest | Competitive Programmers, Mentors/Coaches | Keep informed and motivated |
+| Low Power, Low Interest | General Public | Minimal engagement, basic communication |
+
