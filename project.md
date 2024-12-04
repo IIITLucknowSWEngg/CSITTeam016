@@ -1,4 +1,4 @@
-# Upsolve : Online Competitive Coding Platform 🚀
+# Upsolve : Online Competitive Coding Platform 🚀💰
 
 ![Competitive Programming Banner](https://img.shields.io/badge/Project-Competitive_Programming_Platform-blue?style=for-the-badge)
 
@@ -12,140 +12,152 @@
 
 ## Introduction
 
-In today's digital age, competitive programming has become an essential skill for software developers. Our team is developing Upsolve, a platform that brings the thrill of algorithmic problem-solving to programmers of all skill levels.
+In today's digital age, competitive programming has become an essential skill for software developers. Our team is developing Upsolve, a platform that brings the thrill of algorithmic problem-solving to programmers of all skill levels, with a unique monetization twist.
 
 Based on our research of existing platforms and user feedback, we identified key pain points in current solutions:
 - Complex user interfaces that intimidate newcomers, making it difficult for beginners to explore or practice.
 - Limited feedback on incorrect submissions, resulting in slower learning and discouragement.
 - Lack of structured learning paths that help users navigate topics progressively.
 - Inconsistent judging systems which can lead to frustration with unfair or inaccurate scoring.
+- Limited motivation and engagement beyond learning and ranking.
 
 ## Vision Statement
 
-> "To create an accessible yet powerful competitive programming platform that combines the robustness of established platforms with modern user experience design principles."
+> "To create an accessible and innovative competitive programming platform that combines robust learning experiences with exciting monetary challenges, empowering developers to grow their skills and earn rewards."
 
-Our goal is to bridge the gap between beginner-friendly and professional-level competitive programming sites by offering intuitive navigation, meaningful feedback, and engaging content for continuous skill development.
+Our goal is to revolutionize competitive programming by offering an intuitive, engaging platform that not only educates but also provides tangible economic incentives for excellence.
 
 ## Core Features
 
-### 1. User Management System 👥
+### 1. User Management System 👥💳
 
-A robust user management system that prioritizes security, personalization, and ease of access:
+An enhanced user management system that prioritizes security, personalization, and financial integration:
 - **Smart Authentication**: Includes multi-factor authentication and email verification for security.
-- **OAuth Integration**: Allows users to log in with Google, GitHub, or other supported services, minimizing friction for new users.
-- **Personalized Profiles**: Users will have a comprehensive dashboard displaying solved problems, language preferences, skill ratings, and achievement badges.
-- **Custom Rating System**: Similar to Codeforces, the rating system adjusts based on contest performance, providing an ongoing, competitive element.
+- **OAuth Integration**: Allows users to log in with Google, GitHub, or other supported services.
+- **Wallet Integration**: Secure digital wallet for contest entries, earnings, and withdrawals.
+- **Personalized Profiles**: Comprehensive dashboards displaying solved problems, language preferences, skill ratings, achievement badges, and earnings history.
+- **Custom Rating System**: Combines performance ratings with monetary achievements.
 
-### 2. Contest Environment ⚔️
+### 2. Monetized Contest Environment ⚔️💰
 
-The contest environment is designed to replicate the competitive experience:
+A revolutionary contest system that adds financial stakes to competitive programming:
+
 ```mermaid
 graph LR
-    A[User Joins Contest] --> B[Problem Selection]
-    B --> C[Code Submission]
-    C --> D[Real-time Evaluation]
-    D --> E[Leaderboard Update]
+    A[User Joins Monetized Contest] --> B[Entry Fee Payment]
+    B --> C[Problem Selection]
+    C --> D[Code Submission]
+    D --> E[Real-time Evaluation]
+    E --> F[Prize Pool Distribution]
 ```
-Key components:
-- **Real-time Contest Participation**: Users can join ongoing contests and see their rank update live.
-- **Dynamic Problem Difficulty Scaling**: Problems are ranked according to difficulty, with scores weighted to reward those solving tougher challenges.
-- **Anti-cheating Measures**: Prevents unfair practices using plagiarism detection and IP-based monitoring.
-- **Automated Evaluation System**: Judging is handled by a highly optimized evaluation engine with low latency, ensuring accurate results.
+
+Key monetization components:
+- **Stake-based Contests**: 
+  - Users can enter contests by paying an entry fee
+  - Entry fees are pooled to create prize money for top performers
+  - Transparent prize distribution based on ranking and performance
+- **Tiered Monetary Rewards**: 
+  - Different contest tiers with varying entry fees and prize pools
+  - Ensures opportunities for programmers at all skill levels
+- **Skill-based Matchmaking**: Contests matched by rating to ensure fair competition
+- **Anti-cheating Measures**: Advanced plagiarism detection and monitoring to maintain contest integrity
 
 ### 3. Problem Archive 📚
 
-A categorized problem archive ensures users can practice effectively:
+Enhanced problem archive with improved learning and earning potential:
 - **Difficulty-based Categorization**: Problems range from Easy (800-1100), Medium (1200-1500), to Hard (1600+).
-- **Topic-wise Organization**: Users can search by topics such as graphs, dynamic programming, sorting, and data structures.
-- **Solution Hints and Editorials**: Provides hints and detailed explanations for problems, aiding in learning.
-- **Practice Mode**: Users can attempt problems multiple times and get instant feedback, allowing unlimited practice.
+- **Monetized Practice Challenges**: 
+  - Optional paid challenges with smaller prize pools
+  - Allows users to earn while practicing
+- **Topic-wise Organization**: Problems categorized by technical domains
+- **Solution Hints and Editorials**: Provides learning resources
+- **Practice Mode**: Unlimited attempts with performance tracking
 
 ### 4. Code Evaluation Engine 🔄
 
-A robust code execution engine ensures consistent performance:
-- **Multi-language Support**: Supports Python 3.8+, C++ 17/20, Java 11/17, and JavaScript (Node.js), allowing flexibility for programmers.
-- **Sandboxed Execution Environment**: Isolates user code to prevent malicious activity and ensures accurate grading.
-- **Custom Test Case Support**: Users can test their code with custom inputs to validate logic.
-- **Detailed Error Reporting**: Provides comprehensive error messages to help users understand issues in their code.
+Robust evaluation system with enhanced features:
+- **Multi-language Support**: Python 3.8+, C++ 17/20, Java 11/17, JavaScript
+- **Sandboxed Execution**: Secure code evaluation
+- **Detailed Performance Analytics**: 
+  - Comprehensive code performance metrics
+  - Insights for skill improvement
+  - Potential monetization of high-quality solutions
 
-### 5. Community Features 🤝
+### 5. Community and Earning Features 🤝💸
 
-Community features foster collaboration and learning:
-- **Discussion Forums**: Each problem will have a dedicated discussion forum, allowing users to seek help and share insights.
-- **Editorial Writing System**: Users can contribute solutions and tutorials, fostering a collaborative learning environment.
-- **User Blogs and Tutorials**: Experienced programmers can write blogs on advanced topics, adding value to the community.
-- **Achievement System**: Users earn achievements based on their activity, encouraging regular participation and progression.
+Community features that promote learning and financial opportunities:
+- **Discussion Forums**: Problem-specific discussion boards
+- **Solution Marketplace**: 
+  - Users can sell high-quality problem solutions
+  - Rewards for creating valuable educational content
+- **Referral Program**: 
+  - Earn credits or a percentage of referral's first contest entry
+- **Achievement System**: 
+  - Monetary rewards for reaching specific milestones
+  - Badges and recognition for top performers
 
 ## Project Boundaries
 
 ### What We're Building 🎯
 1. **Core Platform**
-   - **Contest Management System**: Supports user-created contests and a global leaderboard for real-time participation.
-   - **Problem Repository**: Hosts a diverse range of problems, from beginner to advanced difficulty levels.
-   - **Evaluation Engine**: A reliable and efficient judging system that ensures fair results.
-   - **Basic Analytics**: Provides performance data, including average solution times, accuracy rates, and user metrics.
+   - Monetized contest management
+   - Secure payment integration
+   - Comprehensive problem repository
+   - Fair and transparent prize distribution system
 
-2. **User Experience**
-   - **Responsive Web Interface**: Ensures accessibility on various devices.
-   - **Code Editor with Syntax Highlighting**: Provides an intuitive coding experience, supporting autocompletion and real-time code analysis.
-   - **Real-time Submissions**: Allows users to see submission results instantly, reducing waiting times.
-   - **Performance Dashboards**: Users can track their progress, strengths, and areas for improvement.
+2. **Financial Features**
+   - Secure digital wallet
+   - Multiple payment method support
+   - Transparent fee and prize tracking
+   - Withdrawal mechanisms
 
-3. **Administration**
-   - **Contest Creation Tools**: Enables administrators to create and manage contests easily.
-   - **Problem Management**: Allows for adding, updating, or categorizing problems.
-   - **User Management**: Enables moderators to manage user accounts and enforce community guidelines.
-   - **System Monitoring**: Tracks server load, submission success rate, and platform uptime.
+3. **User Experience**
+   - Responsive, intuitive web interface
+   - Real-time contest and earnings tracking
+   - Performance and financial dashboards
 
 ### What We're Not Building ⛔
 1. **Advanced Features**
-   - AI-driven problem generation.
-   - Interactive video tutorials or streaming.
-   - Mobile applications or browser extensions (initially).
+   - Full cryptocurrency integration
+   - Complete financial trading platform
+   - Mobile applications (initial phase)
 
 2. **External Integrations**
-   - IDE plugins and LMS integration.
-   - Social media or payment systems.
+   - Direct bank transfers
+   - Advanced financial derivatives
 
 ## Technical Architecture
 
-Here's a high-level overview of our system's structure, enabling scalability and responsiveness:
-
 ```mermaid
 graph TD
-    A[Web Interface] -->|HTTP/WebSocket| B[Application Server]
+    A[Web Interface] -->|Secure Channels| B[Application Server]
     B --> C[Authentication Service]
-    B --> D[Contest Manager]
+    B --> D[Contest & Payment Manager]
+    D --> I[Payment Gateway]
     B --> E[Code Executor]
     E -->|Sandbox| F[Judge System]
     B --> G[Database]
     B --> H[Cache Layer]
+    B --> J[Wallet Service]
 ```
 
-- **Web Interface**: Provides an interactive UI, powered by React or Vue.js, ensuring a smooth user experience.
-- **Application Server**: Manages requests and maintains contest and user data.
-- **Authentication Service**: Secures logins and manages user sessions.
-- **Contest Manager**: Controls contest activities and monitors active users.
-- **Code Executor**: A dedicated service for evaluating submissions in a secure, sandboxed environment.
-- **Judge System**: Scores each submission based on accuracy and efficiency.
-- **Database**: Stores user information, contest details, and problem sets.
-- **Cache Layer**: Boosts performance by reducing database load for frequently accessed data.
+Additional architectural considerations:
+- Secure, scalable payment infrastructure
+- Robust fraud detection mechanisms
+- Compliance with financial regulations
 
 ## References & Inspiration
 
-Our design is influenced by several successful platforms:
+Influenced by:
+1. Codeforces (Contest Structure)
+2. LeetCode (Learning Platform)
+3. Kaggle (Monetary Challenges)
+4. eSports Platforms (Competitive Monetization)
 
-1. **Codeforces**: Robust rating system, contest format, and difficulty classification.
-2. **LeetCode**: Modern interface, feedback-driven submission system, and topic-based categorization.
-3. **AtCoder**: Precise contest timing, advanced metrics, and effective anti-cheating practices.
+### Research References
+1. Singh, R., & Goyal, M. (2023). "Monetization in Online Learning Platforms."
+2. Kumar, A., et al. (2022). "Designing Scalable Online Judge Systems with Financial Integration."
 
-### Research Papers
-
-1. Singh, R., & Goyal, M. (2023). "Modern Competitive Programming Platforms: A Comparative Study." *Journal of Software Engineering*, 15(2), 45-62.
-2. Kumar, A., et al. (2022). "Designing Scalable Online Judge Systems." *International Conference on Software Architecture*, IEEE.
-
-
-<div> </div>
-<div align="center" >
-<i>Built by Team InnovateCS at IIIT Lucknow</i>
+<div align="center">
+<i>Innovatively Built by Team InnovateCS at IIIT Lucknow</i>
 </div>
