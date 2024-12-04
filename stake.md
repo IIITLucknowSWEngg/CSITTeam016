@@ -87,6 +87,30 @@
   - A beginner-friendly interface with easy-to-understand problems.
   - Learning resources such as tutorials, guides, or problem walkthroughs.
   - An option to participate in beginner-level or casual contests.
+ 
+
+### Graph
+
+```mermaid
+flowchart TD
+    A[Stakeholder Mapping: Codeforces Clone]
+    
+    A --> PrimaryStakeholders[Primary Stakeholders]
+    A --> SecondaryStakeholders[Secondary Stakeholders]
+    A --> PotentialStakeholders[Potential Stakeholders]
+    
+    PrimaryStakeholders --> CompetitiveProgrammers[Competitive Programmers]
+    PrimaryStakeholders --> Administrators[Administrators]
+    PrimaryStakeholders --> Developers[Developers]
+    
+    SecondaryStakeholders --> Sponsors[Sponsors & Organizations]
+    SecondaryStakeholders --> EducationalInstitutions[Educational Institutions]
+    
+    PotentialStakeholders --> EventOrganizers[Event Organizers]
+    PotentialStakeholders --> OpenSourceContributors[Open Source Contributors]
+    PotentialStakeholders --> GeneralPublic[General Public]
+
+```
 
 ## RACI MATRIX
 
@@ -125,4 +149,9 @@
 | High Power, Low Interest | Sponsors | Keep satisfied with periodic updates |
 | Low Power, High Interest | Competitive Programmers, Mentors/Coaches | Keep informed and motivated |
 | Low Power, Low Interest | General Public | Minimal engagement, basic communication |
+
+
+
+
+
 
