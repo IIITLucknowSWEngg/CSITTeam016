@@ -88,3 +88,22 @@
   - Learning resources such as tutorials, guides, or problem walkthroughs.
   - An option to participate in beginner-level or casual contests.
 
+## RACI MATRIX
+
+| Task/Activity | Competitive Programmers | Administrators | Developers | Sponsors | Educational Institutions | Mentors/Coaches | System Administrators | Event Organizers | Open Source Contributors | General Public |
+|--------------|-------------------------|----------------|------------|----------|--------------------------|-----------------|----------------------|-----------------|-------------------------|---------------|
+| Platform Development | I | C | R/A | C | I | C | C | I | C | I |
+| Problem Creation | I | R/A | C | C | C | C | I | C | C | I |
+| Contest Management | I | R/A | C | C | R | C | I | R | I | I |
+| User Experience Design | I | C | R/A | I | C | C | I | I | C | R |
+| Performance Optimization | I | C | R/A | I | I | I | C | I | C | I |
+| Security Management | I | C | C | I | I | I | R/A | I | C | I |
+| Analytics and Reporting | I | R | C | R/A | R | R | C | R | I | I |
+| Community Engagement | I | C | C | C | C | R | I | R | R/A | R |
+
+**Legend:**
+- **R**: Responsible (does the work)
+- **A**: Accountable (makes final decisions)
+- **C**: Consulted (provides input)
+- **I**: Informed (kept up-to-date)
+
