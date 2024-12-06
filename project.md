@@ -1,4 +1,5 @@
-# Upsolve : Online Competitive Coding Platform 🚀💰
+
+# Hashcode : Online Competitive Coding Platform 🚀💰
 
 ![Competitive Programming Banner](https://img.shields.io/badge/Project-Competitive_Programming_Platform-blue?style=for-the-badge)
 
@@ -12,7 +13,7 @@
 
 ## Introduction
 
-In today's digital age, competitive programming has become an essential skill for software developers. Our team is developing Upsolve, a platform that brings the thrill of algorithmic problem-solving to programmers of all skill levels, with a unique monetization twist.
+In today's digital age, competitive programming has become an essential skill for software developers. Our team is developing Hashcode, a platform that brings the thrill of algorithmic problem-solving to programmers of all skill levels, with a unique monetization twist.
 
 Based on our research of existing platforms and user feedback, we identified key pain points in current solutions:
 - Complex user interfaces that intimidate newcomers, making it difficult for beginners to explore or practice.
