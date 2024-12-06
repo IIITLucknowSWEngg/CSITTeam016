@@ -1,6 +1,6 @@
 # User Requirements Document (URD)
-## Upsolve: A Modern Competitive Programming Platform
-### Version 1.0 | October 2024
+## Hashcode: A Modern Competitive Programming Platform
+### Version 1.0 | December 2024
 
 ![Document Status](https://img.shields.io/badge/Status-Draft-yellow.svg) ![Version](https://img.shields.io/badge/Version-1.0-blue.svg)
 
@@ -8,7 +8,7 @@
 
 ## Executive Summary
 
-Upsolve aims to revolutionize the competitive programming landscape by providing a robust, scalable platform that combines the rigor of algorithmic challenges with the engagement of a vibrant community. Drawing inspiration from successful platforms like Codeforces, LeetCode, and HackerRank, CompeteCode addresses the growing demand for high-quality programming practice and assessment tools.
+Hashcode aims to revolutionize the competitive programming landscape by providing a robust, scalable platform that combines the rigor of algorithmic challenges with the engagement of a vibrant community. Drawing inspiration from successful platforms like Codeforces, LeetCode, and HackerRank, Hashcode addresses the growing demand for high-quality programming practice and assessment tools.
 
 ---
 
@@ -16,7 +16,7 @@ Upsolve aims to revolutionize the competitive programming landscape by providing
 
 ### 1.1 Purpose and Scope
 
-This URD outlines the comprehensive requirements for Upsolve, a next-generation competitive programming platform. The document serves as the foundation for system design, development, and validation, ensuring alignment between stakeholder needs and platform capabilities.
+This URD outlines the comprehensive requirements for Hashcode, a next-generation competitive programming platform. The document serves as the foundation for system design, development, and validation, ensuring alignment between stakeholder needs and platform capabilities.
 
 **Key Objectives:**
 - Create a reliable platform for hosting real-time programming contests
@@ -114,9 +114,6 @@ sequenceDiagram
    - Long Challenge (1-7 days)
    - Short Sprint (30-60 minutes)
 3. Customizable scoring systems
-
-**Real-world Example:**
-> Google Kickstart's round structure serves as a benchmark, where participants compete in 3-hour rounds with increasing problem difficulty.
 
 ### 3.2 Code Submission System 🔴
 
@@ -314,7 +311,7 @@ graph TD
 
 | Version | Date | Author | Changes |
 |---------|------|---------|---------|
-| 1.0 | 2024-10-29 | CompeteCode Team | Initial Release |
+| 1.0 | 2024-12-06 | Hashcode Team | Initial Release |
 | 1.1 | TBD | - | Planned Update |
 
 ---
@@ -334,3 +331,8 @@ graph TD
 1. IEEE 830-1998 Standard
 2. SWEBOK v3.0
 3. ISO/IEC/IEEE 29148:2018
+
+Refer to the [Software Engineering Body of Knowledge (SWEBOK)](https://www.computer.org/education/bodies-of-knowledge/software-engineering/v4) for guidance.
+
+---
+
