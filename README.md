@@ -26,7 +26,7 @@
     <td>LIT2023030</td>
     <td>Information Technology</td>
     <td><a href="mailto:lit2023030@iiitl.ac.in">lit2023030@iiitl.ac.in</a></td>
-    <td><a href="https://github.com/rishyyym0927"><img src="https://img.shields.io/badge/GitHub-Profile-blue?style=flat&logo=github"></a></td>
+    <td><a href="https://github.com/rishyym0927"><img src="https://img.shields.io/badge/GitHub-Profile-blue?style=flat&logo=github"></a></td>
   </tr>
   <tr>
     <td><img src="https://github.com/identicons/SidharthKumarSingh.png" width="60px" height="60px"></td>
