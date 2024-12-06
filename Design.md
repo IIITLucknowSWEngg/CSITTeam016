@@ -11,21 +11,27 @@
 | 6 | References |
 
 ## 1. Introduction
+
+### 1.1 Purpose
 This document provides the design specifications for the Hashcode competitive programming platform. It adheres to the principles outlined in the SWEBOK, SDD Template, and IEEE 1016 standards.
+
+### 1.2 Scope
+The HashCode Competitive Coding Platform is designed to emulate a CodeForces-like experience, offering an engaging environment for users to practice algorithmic problem-solving. This document outlines the architectural and design elements crucial for the platform’s implementation, ensuring scalability, security, and performance. It will serve as a blueprint for the development process.
+
 
 ## 2. Design Principles
 The design principles guiding this project include:
-- **Modularity**: Breaking down the system into manageable components.
+- **Modularity**: Independent modules for contests, user management, problem archives, and evaluation to ensure ease of maintenance and scalability.
 - **Reusability**: Designing components that can be reused across different parts of the system.
-- **Scalability**: Ensuring the system can handle increased load.
-- **Security**: Incorporating security measures to protect user data and system integrity.
+- **Scalability**: Support for growing user bases and simultaneous contest participation through a robust backend architecture.
+- **Security**: Incorporating security measures to protect user data including secure authentication and system integrity .
 - **Maintainability**: Designing the system for ease of maintenance and updates.
 
 ## 3. System Architecture
 The system architecture consists of the following components:
-- **Web Interface**: The front-end, developed using React.js.
-- **Application Server**: The back-end, developed using Node.js/Express.
-- **Database**: PostgreSQL for persistent storage.
+- **Web Interface**: The front-end, developed using React.js with modern UI libraries for an intuitive and responsive user experience.
+- **Application Server**: The back-end, developed using Node.js/Express and managing APIs.
+- **Database**:   A PostgreSQL database for storing struc   tured data such as user profiles, contest details, and problem archives.
 - **Authentication Service**: Handles user authentication and authorization.
 - **Contest Engine**: Manages contest creation and execution.
 - **Judge System**: Evaluates code submissions.
