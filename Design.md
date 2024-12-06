@@ -12,11 +12,11 @@
 
 ## 1. Introduction
 
-### 1.1 Purpose
-This document provides the design specifications for the Hashcode competitive programming platform. It adheres to the principles outlined in the SWEBOK, SDD Template, and IEEE 1016 standards.
+### 1.1 Purpose  
+This Software Design Document (SDD) defines the design specifications for the HashCode Competitive Programming Platform, structured in alignment with the principles and best practices of the **Software Engineering Body of Knowledge (SWEBOK)**, the **IEEE 1016 Standard for Software Design Descriptions**, and established SDD templates. This document provides a detailed blueprint for the platform's architecture and design, ensuring compliance with industry standards and supporting efficient development and maintenance.
 
-### 1.2 Scope
-The HashCode Competitive Coding Platform is designed to emulate a CodeForces-like experience, offering an engaging environment for users to practice algorithmic problem-solving. This document outlines the architectural and design elements crucial for the platform’s implementation, ensuring scalability, security, and performance. It will serve as a blueprint for the development process.
+### 1.2 Scope  
+The HashCode Competitive Programming Platform is engineered to deliver a **high-performance, scalable, and secure environment** for algorithmic problem-solving, closely mirroring the interactive experience of platforms such as Codeforces. This document outlines the core architectural components, technical design specifications, and system-level considerations to guide the platform's development lifecycle. The design emphasizes **modular extensibility**, robust **performance optimization**, and enhanced **user engagement** through an intuitive interface and seamless functionality.
 
 
 ## 2. Design Principles
