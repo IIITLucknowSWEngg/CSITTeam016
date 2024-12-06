@@ -275,9 +275,86 @@ endif
 stop
 @enduml
 ```
+### Deployment Diagram
+![d1](https://github.com/user-attachments/assets/14e5f632-aaa4-4941-92ee-24d3b4627390)
+
+```plantuml
+@startuml
+!define SPRITESURL https://raw.githubusercontent.com/Drakemor/RedhatDiagramIcons/master/icons/
+
+left to right direction
+skinparam linetype polyline
+skinparam nodesep 20
+skinparam ranksep 20
+
+node "Load Balancer" <<Load Balancer>> as LB {
+  [Nginx Proxy]
+}
+
+cloud "Cloud Provider (AWS)" {
+  node "Frontend Cluster" <<Container Cluster>> as FrontendCluster {
+    [React Web App] as WebApp
+  }
+
+  node "Backend Microservices" <<Kubernetes Cluster>> as BackendCluster {
+    node "Service 1" <<Docker Container>> {
+      [Rust API Gateway]
+    }
+    node "Service 2" <<Docker Container>> {
+      [Contest Engine]
+    }
+    node "Service 3" <<Docker Container>> {
+      [Judge System]
+    }
+  }
+
+  database "Database Cluster" <<High Availability>> as DBCluster {
+    [PostgreSQL Primary]
+    [PostgreSQL Replica 1]
+    [PostgreSQL Replica 2]
+  }
+
+  node "Cache Layer" <<Distributed Cache>> as CacheLayer {
+    [Redis Cluster]
+  }
+
+  node "Authentication Service" <<Secure Service>> as AuthService {
+    [OAuth/JWT Service]
+  }
+
+  node "Payment Gateway" <<Secure Service>> as PaymentGateway {
+    [Payment Processor]
+  }
+}
+
+node "Monitoring System" <<Monitoring>> as Monitoring {
+  [Prometheus]
+  [Grafana Dashboard]
+}
+
+node "Log Management" <<Log Aggregation>> as LogManagement {
+  [ELK Stack]
+}
+
+LB --> WebApp : route traffic
+WebApp --> [NodeJS API Gateway] : API calls
+[NodeJS API Gateway] --> [Contest Engine]
+[NodeJS API Gateway] --> [Judge System]
+[NodeJS API Gateway] --> DBCluster
+[NodeJS API Gateway] --> CacheLayer
+[NodeJS API Gateway] --> AuthService
+[NodeJS API Gateway] --> PaymentGateway
+
+[NodeJS API Gateway] ..> Monitoring : metrics
+[NodeJS API Gateway] ..> LogManagement : logs
+
+@enduml
+```
+
 
 ### Conclusion
-The detailed architecture of the Hashcode platform is designed to be modular, scalable, and efficient, ensuring a robust environment for competitive programming. The use of PlantUML diagrams helps in visualizing the interactions and structure of the platform's components.
+The detailed architecture of the Hashcode platform is designed to be modular, scalable, and efficient, ensuring a robust environment for competitive programming. The use of PlantUML diagrams helps in visualizing the 
+interactions and structure of the platform's components.
 
 ---
 
