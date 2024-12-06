@@ -1,5 +1,3 @@
-
-
 # 🏆 Team InnovateCS
 
 <div align="center">
@@ -10,7 +8,6 @@
 [![Status](https://img.shields.io/badge/Status-In_Development-yellow)]()
 
 </div>
-
 
 ## 👥 Team Members
 
@@ -37,7 +34,7 @@
     <td>LCS2023043</td>
     <td>Computer Science</td>
     <td><a href="mailto:lcs2023043@iiitl.ac.in">lcs2023043@iiitl.ac.in</a></td>
-    <td><a href="https://github.com/[username]"><img src="https://img.shields.io/badge/GitHub-Profile-blue?style=flat&logo=github"></a></td>
+    <td><a href="https://github.com/sidharthkumar"><img src="https://img.shields.io/badge/GitHub-Profile-blue?style=flat&logo=github"></a></td>
   </tr>
   <tr>
     <td><img src="https://github.com/identicons/ManeeshShukla.png" width="60px" height="60px"></td>
@@ -45,7 +42,7 @@
     <td>LIT2023040</td>
     <td>Information Technology</td>
     <td><a href="mailto:lit2023040@iiitl.ac.in">lit2023040@iiitl.ac.in</a></td>
-    <td><a href="https://github.com/[username]"><img src="https://img.shields.io/badge/GitHub-Profile-blue?style=flat&logo=github"></a></td>
+    <td><a href="https://github.com/maneeshshukla"><img src="https://img.shields.io/badge/GitHub-Profile-blue?style=flat&logo=github"></a></td>
   </tr>
   <tr>
     <td><img src="https://github.com/identicons/YatinSharma.png" width="60px" height="60px"></td>
@@ -53,7 +50,7 @@
     <td>LIT2023048</td>
     <td>Information Technology</td>
     <td><a href="mailto:lit2023048@iiitl.ac.in">lit2023048@iiitl.ac.in</a></td>
-    <td><a href="https://github.com/[username]"><img src="https://img.shields.io/badge/GitHub-Profile-blue?style=flat&logo=github"></a></td>
+    <td><a href="https://github.com/yatinsharma"><img src="https://img.shields.io/badge/GitHub-Profile-blue?style=flat&logo=github"></a></td>
   </tr>
   <tr>
     <td><img src="https://github.com/identicons/AyushYadav.png" width="60px" height="60px"></td>
@@ -61,7 +58,7 @@
     <td>LIT2023049</td>
     <td>Information Technology</td>
     <td><a href="mailto:lit2023049@iiitl.ac.in">lit2023049@iiitl.ac.in</a></td>
-    <td><a href="https://github.com/[username]"><img src="https://img.shields.io/badge/GitHub-Profile-blue?style=flat&logo=github"></a></td>
+    <td><a href="https://github.com/ayushyadav"><img src="https://img.shields.io/badge/GitHub-Profile-blue?style=flat&logo=github"></a></td>
   </tr>
   <tr>
     <td><img src="https://github.com/identicons/YuwanshBansal.png" width="60px" height="60px"></td>
@@ -69,16 +66,14 @@
     <td>LCS2023005</td>
     <td>Computer Science</td>
     <td><a href="mailto:lcs2023005@iiitl.ac.in">lcs2023005@iiitl.ac.in</a></td>
-    <td><a href="https://github.com/[username]"><img src="https://img.shields.io/badge/GitHub-Profile-blue?style=flat&logo=github"></a></td>
+    <td><a href="https://github.com/yuwanshbansal"><img src="https://img.shields.io/badge/GitHub-Profile-blue?style=flat&logo=github"></a></td>
   </tr>
 </table>
-
-
 
 ## 📋 Project Overview
 
 ### Project Title
-**Upsolve** : Codeforces Clone
+**HashCode** : Competitive Coding Platform
 
 ### Description
 The project aims to create a CodeForces-like competitive programming platform, providing users with the experience of algorithmic problem-solving in a controlled and gamified environment. The platform enables users to participate in contests, view problem archives, and track personal progress, focusing on accessible, high-performance web design.
@@ -100,8 +95,6 @@ The project aims to create a CodeForces-like competitive programming platform, p
 - **Issue Link**: [CSITTeam016 - CodeForces Arena Clone Approval](https://github.com/IIITLucknowSWEngg/CSITTeam016/issues/XX)
 - **Repository**: [GitHub Repository - CSITTeam016](https://github.com/IIITLucknowSWEngg/CSITTeam016)
 
-
-
 ## 🛠️ Assignment Deliverables
 
 ### 1. Project Scope (project.md)
@@ -118,12 +111,8 @@ The project aims to create a CodeForces-like competitive programming platform, p
 
 Refer to the [Software Engineering Body of Knowledge (SWEBOK)](https://www.computer.org/education/bodies-of-knowledge/software-engineering/v4) for guidance.
 
-
-
 ## 📊 Team Contributions
 Each team member has made their initial contributions to the repository. You can view individual contributions through the [Contributors](https://github.com/IIITLucknowSWEngg/CSITTeam016/graphs/contributors) page.
-
-
 
 ## 📑 Files in Repository
 
@@ -134,12 +123,9 @@ Each team member has made their initial contributions to the repository. You can
 - **project.md**: Project Scope and Objectives.
 - **stake.md**: Stakeholder Analysis.
 
-
-
 ## 📝 License
 This project is MIT licensed - see the [LICENSE](LICENSE) file for details.
 
 <div align="center">
 Made with ❤️ by Team InnovateCS at IIIT Lucknow
 </div>
-
