@@ -6,57 +6,37 @@ This document provides an extensive list of key blogs, articles, and resources t
 
 ## Key Blogs and Articles  
 
-### 1. Codeforces Blog  
-    - **Description**: The official Codeforces blog serves as a treasure trove of information, providing updates, insights, and announcements directly from the Codeforces team.  
-    - **Relevance**: These blogs offer a deep dive into how a platform like Codeforces operates, including contest management, system architecture, and real-time handling of user interactions.  
-    - **Key Learnings**: Contest scheduling, managing user loads during peak times, and implementing real-time features like scoreboard updates.
+### 1. Create GeeksforGeeks Clone Using HTML CSS & JavaScript 
+**URL**: [GFG Blog](https://www.geeksforgeeks.org/create-geeksforgeeks-clone-using-html-css-javascript/)  
+**Description**:  
+In this article, we'll make a clone of the GeeksforGeeks website. The clone includes home, about, courses, and contact pages. On the home page, we've added sections like categories, features, testimonials, and FAQs, similar to the GFG website. We named our clone GeeksforGeeks 2.0 to avoid copyright issues. The about page showcases achievements and introduces our team. The courses page features GFG courses, and the contact page provides contact information.
 
-### 2. Competitive Programming Tutorials  
-    - **Description**: Detailed guides and tutorials on algorithms, data structures, and problem-solving techniques.  
-    - **Relevance**: Understanding these fundamentals is essential for designing problems and crafting test cases for contests.  
-    - **Examples**:  
-        - Tutorials on graph theory, dynamic programming, and segment trees.  
-        - Insights into creating test cases that challenge edge scenarios effectively.  
+### 2. How to set problems for a programming contest?
+**URL**: [Codeforces Blog](https://codeforces.com/blog/entry/75176)  
+**Description**:  
+The mashup contest feature of Codeforces is very useful for group training by participating in a past Codeforces contest. I am able to clone a contest using the CLONE CONTEST feature.
 
-### 3. Scalable Web Architecture  
-    - **Description**: Blogs and articles focusing on designing scalable web applications capable of handling high traffic volumes.  
-    - **Relevance**: Platforms like Codeforces must handle spikes in user traffic during contests without compromising performance.  
-    - **Key Takeaways**:  
-        - Load balancing techniques.  
-        - Database optimization strategies, such as indexing and sharding.  
-        - Use of caching to reduce server load and speed up data retrieval.  
-
-### 4. User Experience Design  
-    - **Description**: Articles on the principles of designing intuitive, user-centric interfaces for web applications.  
-    - **Relevance**: A smooth and intuitive interface ensures that both contestants and organizers can navigate the platform easily.  
-    - **Highlights**:  
-        - Minimalist yet functional designs for dashboards and problem pages.  
-        - Visual feedback elements for live updates, such as submission statuses and leaderboard changes.  
-
----
+### 3. CPIdeas: use AI to generate competitive programming ideas  
+**URL**: [Codeforces Blog](https://codeforces.com/blog/entry/104374)  
+**Description**:  
+Being asked to propose competitive programming questions is pretty daunting. When you're out of fresh ideas, you can either search in the old pile of problems, hoping to find some room for modifications and improvements, or come up with random words like "chessboard inversion counting" and hopefully resemble interesting problems from them.
 
 ## Additional Resources  
 
-### 1. GitHub Repositories  
-    - **Description**: A collection of open-source projects and libraries that inspired or directly contributed to our platform's development.  
-    - **Examples**:  
-        - Real-time communication libraries (e.g., WebSocket, Pusher).  
-        - Contest-management frameworks and community-driven open-source clones of competitive programming platforms.  
-    - **Impact**: These repositories offered ready-made solutions for implementing features like live updates, user authentication, and performance optimizations.
+### 1. A website to share solutions to coding competitions.
+**URL**: [Codeforces Blog](https://codeforces.com/blog/entry/22368)  
+**Description**:  
+This blog entry discusses a platform where users can share solutions to coding competition problems, fostering a collaborative learning environment.
 
-### 2. Technical Documentation  
-    - **Description**: Detailed documentation on the technologies and frameworks employed in building the platform.  
-    - **Examples**:  
-        - Frameworks: Next.js, Express.js, and Django for efficient backend and frontend development.  
-        - Tools: Redis and Memcached for caching, PostgreSQL for reliable database management, and RabbitMQ for task queuing.  
-    - **Purpose**: To ensure developers working on the project have access to a well-structured reference for all technologies used.  
+### 2. How To Make Competitive Coding Website Using Django Framework
+**URL**: [Medium Blog](https://medium.com/@apurvaajmera10/how-to-make-competitive-website-using-django-a575ee8482d8)  
+**Description**:  
+In this article, the author explains how to create a competitive coding website like GeeksforGeeks and HackerRank using the Django framework. The article includes a link to the author's GitHub repository for reference.
 
-### 3. Community Forums  
-    - **Description**: Online forums and communities where competitive programmers and developers share advice, discuss best practices, and collaborate on solutions.  
-    - **Examples**:  
-        - Platforms like Reddit’s competitive programming subreddit and Codeforces discussion boards.  
-        - Developer-focused communities such as Stack Overflow and Dev.to.  
-    - **Utility**: These forums provided solutions to technical challenges and helped refine our ideas for user-centric features.  
+### 3. What Is A Community Forum And How Can It Help Your Business?
+**URL**: [Freshwork Blog](https://www.freshworks.com/freshdesk/self-service-portal/community-forum-blog/)  
+**Description**:  
+This blog post explains the benefits of community forums for businesses. It highlights how forums can help users find solutions to tech problems and foster a sense of community.
 
 ---
 
