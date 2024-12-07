@@ -1,9 +1,12 @@
 ### Architecture of Hashcode Platform
 
 #### Introduction
-This document provides a comprehensive overview of the architecture of the Hashcode platform, detailing various components and their interactions. The diagrams aim to be highly detailed to reflect a real-world project setup.
+This document provides an in-depth architectural overview of the Hashcode platform, a next-generation competitive programming ecosystem. It focuses on detailing the various components and their interactions, with the intent to ensure scalability, reliability, and optimal user experience. The architectural diagrams are meticulously crafted to reflect a real-world implementation.
 
 ### System Context Diagram
+
+This diagram outlines the key stakeholders and their interaction with the Hashcode platform. It provides a high-level understanding of the platform’s major components and the flow of information.
+
 ![image](https://github.com/user-attachments/assets/3ff339ec-6b59-46c3-afd1-90d1d8e2457f)
 
 
@@ -41,6 +44,8 @@ Mentor --> [Web Interface]
 ```
 
 ### Container Diagram
+
+The container diagram provides a detailed breakdown of the components that form the Hashcode platform, emphasizing their roles and relationships.
 
 ![image](https://github.com/user-attachments/assets/276243f2-1491-4490-b0d2-226795122001)
 
@@ -100,6 +105,9 @@ API --> Cache
 ```
 
 ### Code Component Diagram
+
+The component diagram represents the logical organization of the Hashcode platform, delineating the responsibilities of each module.
+
 ![image](https://github.com/user-attachments/assets/6e694d9c-31a0-4db8-9c3f-359366d40721)
 
 ```plantuml
@@ -170,6 +178,9 @@ NodeApp -> Redis : caches data
 ```
 
 ### Use Case Diagram
+
+This diagram illustrates the primary actions that various users can perform on the platform.
+
 ![image](https://github.com/user-attachments/assets/88fc900b-d551-402f-b852-14be6fb59d37)
 
 ```plantuml
@@ -198,6 +209,10 @@ Mentor -> (Track Student Progress)
 ```
 
 ### Sequence Diagram
+
+The sequence diagram maps out the interactions between components when a user accesses the platform, participates in a contest, and submits a solution.
+
+
 ![image](https://github.com/user-attachments/assets/111f6f97-a84a-4c8f-941e-110c6d2cb8c5)
 
 ```plantuml
@@ -245,6 +260,9 @@ PP -> UI: Payment Confirmation
 ```
 
 ### Activity Diagram
+
+The activity diagram outlines the sequence of operations a user performs on the platform.
+
 ![image](https://github.com/user-attachments/assets/1a10142b-bcf7-45a1-901e-fd4a975cde16)
 
 ```plantuml
@@ -276,6 +294,9 @@ stop
 @enduml
 ```
 ### Deployment Diagram
+
+The deployment diagram provides an infrastructure-level view of the Hashcode platform, ensuring it meets requirements for scalability, fault tolerance, and performance.
+
 ![d1](https://github.com/user-attachments/assets/14e5f632-aaa4-4941-92ee-24d3b4627390)
 
 ```plantuml
@@ -353,8 +374,7 @@ WebApp --> [NodeJS API Gateway] : API calls
 
 
 ### Conclusion
-The detailed architecture of the Hashcode platform is designed to be modular, scalable, and efficient, ensuring a robust environment for competitive programming. The use of PlantUML diagrams helps in visualizing the 
-interactions and structure of the platform's components.
+The architecture of the Hashcode platform is designed to be modular, scalable, and resilient, ensuring a seamless experience for all users. By leveraging industry-standard tools and practices, this architecture lays a strong foundation for future growth and feature expansions.
 
 ---
 
