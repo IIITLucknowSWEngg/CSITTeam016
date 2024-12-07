@@ -72,7 +72,7 @@ A test case is marked as **Pass** if actual outcomes match expected results. A t
 
 Hardware and Software Requirements
 
-```markdown
+
 | Component            | Details                          |
 |----------------------|----------------------------------|
 | Web Browsers         | Chrome (v114+), Firefox (v98+), Edge |
@@ -81,7 +81,7 @@ Hardware and Software Requirements
 | Databases            | PostgreSQL (v13+)                |
 | Programming Languages| Node.js (v16+), React.js (v18+)  |
 | Testing Tools        | Selenium, Postman, JMeter        |
-```
+
 
 Environment Configuration
 
