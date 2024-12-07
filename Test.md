@@ -12,51 +12,115 @@
 | 2 | Test Design Specification |
 | 3 | Test Case Specification |
 | 4 | Test Procedure Specification |
-| 5 | Test Summary Report |
+| 5 | Test Scenarios |
+| 6 | Test Summary Report |
 
 ---
 
-## 1. Test Plan
-### 1.1 Introduction
-The purpose of this document is to outline the testing strategy and test cases for the Hashcode platform based on the IEEE-829-2008 standard. This document includes test scenarios written in BDD style using Cucumber and Chai Assertion Library.
+## **1. Test Plan**  
 
-### 1.2 Test Items
-- User Management
-- Contest Management
-- Code Evaluation
-- Payment Processing
-
-### 1.3 Features to be Tested
-- User registration and authentication
-- Contest creation and participation
-- Code submission and evaluation
-- Payment transactions and wallet management
-
-### 1.4 Features not to be Tested
-- Real-time chat
-- Offline functionality
-
-### 1.5 Approach
-The testing approach will include unit testing, integration testing, system testing, and acceptance testing. BDD will be used to write clear and understandable test scenarios.
-
-### 1.6 Pass/Fail Criteria
-Test cases will be marked as pass if the actual results match the expected results. Any deviations will be marked as fail.
-
-### 1.7 Suspension and Resumption Criteria
-Testing will be suspended if critical defects are identified and resumed once they are resolved.
+### **1.1 Introduction**  
+The purpose of this document is to outline the testing strategy, methodology, and test cases for the **Hashcode Online Competitive Programming Platform**, ensuring robust quality standards. This document follows the IEEE-829-2008 standard and uses a Behavior-Driven Development (BDD) approach.
 
 ---
 
-## 2. Test Design Specification
-### 2.1 Test Design Overview
-This section outlines the design of the test cases, including the approach and techniques used to verify the functionality of the Hashcode platform.
+### **1.2 Test Items**  
+- User Management  
+- Contest Management  
+- Code Evaluation  
+- Payment Processing  
 
-### 2.2 Test Design Features
-- User Management: Verify user registration, login, and profile management.
-- Contest Management: Verify contest creation, participation, and result processing.
-- Code Evaluation: Verify code submission, execution, and scoring.
-- Payment Processing: Verify wallet transactions, entry fee payments, and prize distributions.
+---
 
+### **1.3 Features to be Tested**  
+- **User Management System**: Registration, login, and profile features.  
+- **Contest Management**: Contest creation, participation, and rankings.  
+- **Code Evaluation**: Submission, execution, and scoring.  
+- **Payment Processing**: Wallet transactions, entry fee payments, and prize distribution.  
+
+---
+
+### **1.4 Features Not to Be Tested**  
+- Real-time chat functionality.  
+- Offline mode or mobile applications (deferred to future phases).  
+
+---
+
+### **1.5 Testing Approach**  
+The testing process includes:  
+1. **Unit Testing**: Validating individual modules.  
+2. **Integration Testing**: Ensuring proper interactions between components.  
+3. **System Testing**: Testing the end-to-end functionality.  
+4. **Acceptance Testing**: Validating against user requirements.  
+5. **Performance Testing**: Ensuring scalability and responsiveness under load.  
+
+**Testing Style**: Behavior-Driven Development (BDD) using **Cucumber** for Gherkin-style test scenarios and **Chai** for assertions.  
+
+---
+
+### **1.6 Pass/Fail Criteria**  
+A test case is marked as **Pass** if actual outcomes match expected results. A test case is marked as **Fail** if there are deviations, performance issues, or errors.
+
+---
+
+### **1.7 Suspension and Resumption Criteria**  
+- Testing will be **suspended** in the event of critical failures (e.g., server crashes, significant defects).  
+- Testing will **resume** after defect resolution and retesting of the impacted areas. 
+
+
+### **1.8 Test Environment**
+
+Hardware and Software Requirements
+
+```markdown
+| Component            | Details                          |
+|----------------------|----------------------------------|
+| Web Browsers         | Chrome (v114+), Firefox (v98+), Edge |
+| Operating Systems    | Windows 10/11, macOS 12+, Linux  |
+| Server Environment   | AWS (EC2, RDS, S3)               |
+| Databases            | PostgreSQL (v13+)                |
+| Programming Languages| Node.js (v16+), React.js (v18+)  |
+| Testing Tools        | Selenium, Postman, JMeter        |
+```
+
+Environment Configuration
+
+```mermaid
+graph LR
+  A[Test Server] --> B[Application Backend]
+  B --> C[Database Server]
+  B --> D[Cache Server]
+  B --> E[Payment Gateway]
+  A --> F[Frontend Server]
+  A --> G[Code Sandbox]
+```
+
+
+- Database : Preloaded with test data for user accounts, contests, and problems.
+- Code Sandbox : Configured for secure and isolated code execution.
+- Payment Gateway : Mock setup to simulate transactions without real-world implications..
+---
+
+## **2. Test Design Specification**  
+
+### **2.1 Test Design Overview**  
+The test design is based on functional, performance, and security requirements of the platform. Each test ensures compliance with expected behavior, especially in critical areas such as contest ranking and payment processing.  
+
+---
+
+### **2.2 Test Features Overview**  
+- **User Management**: Secure registration, login, and wallet features.  
+- **Contest System**: Transparent contest participation and result accuracy.  
+- **Code Evaluation**: Secure and precise execution in a sandboxed environment.  
+- **Payment Processing**: Safe wallet transactions and prize distributions.  
+
+```mermaid
+flowchart TD  
+    A[User Management] --> B[Wallet Transactions]  
+    B --> C[Contest Management]  
+    C --> D[Code Evaluation]  
+    D --> E[Prize Distribution]  
+```
 ---
 
 ## 3. Test Case Specification
@@ -196,13 +260,86 @@ describe('Payment Processing', () => {
 
 ---
 
-## 5. Test Summary Report
+## 5. Test Scenarios
 
-### 5.1 Test Summary
+### 5.1 Functional Testing
+
+```markdown
+| Module                  | Test Case                                                   | Expected Outcome                                                   |
+|-------------------------|-------------------------------------------------------------|--------------------------------------------------------------------|
+| User Management System  | Register with valid and invalid credentials.                | Successful registration or appropriate error messages.             |
+|                         | Authenticate using Google and GitHub OAuth.                 | Successful login via OAuth.                                        |
+|                         | Add funds to wallet and view transaction history.           | Wallet updates correctly and displays a full transaction log.      |
+| Contest Participation   | Pay entry fees and join contests.                           | Entry fee deduction and successful enrollment.                     |
+|                         | Submit solutions during active contests.                    | Solutions are accepted, validated, and ranked.                     |
+|                         | Receive prizes and view prize distribution details.         | Prizes distributed accurately based on rankings.                   |
+| Problem Archive         | Access problems by difficulty or topic.                     | Correct listing and filtering of problems.                         |
+|                         | View editorial and hints after solving.                     | Editorials and hints load correctly.                               |
+| Code Evaluation         | Submit code in supported languages with valid/invalid solutions. | Correct output, performance metrics, and feedback displayed.       |
+| Community Features      | Post on discussion forums and interact with other users.    | Forum posts appear correctly and allow replies.                    |
+|                         | Upload solutions to the marketplace.                        | Solutions listed with appropriate monetization options.            |
+```
+
+### 5.2 Performance Testing
+
+```markdown
+| Scenario                    | Test Case                                         | Expected Outcome                                                   |
+|-----------------------------|---------------------------------------------------|--------------------------------------------------------------------|
+| User Load Testing           | 500 simultaneous users logging in and browsing the platform. | Stable performance with minimal latency.                           |
+| Contest Load Testing        | 200 users participating in a live contest.        | Real-time updates and submissions processed within 2 seconds.      |
+| Code Evaluation Stress Test | 10,000 code submissions in an hour.               | Submissions evaluated within acceptable time limits (<5s per run). |
+```
+
+
+### 5.3 Security Testing
+
+```markdown
+| Module            | Test Case                                         | Expected Outcome                                                   |
+|-------------------|---------------------------------------------------|--------------------------------------------------------------------|
+| User Management   | Attempt brute-force login attempts.               | User account locked after 5 failed attempts.                       |
+| Payment System    | Simulate malicious transaction injections.        | Transactions rejected with error logs.                             |
+| Code Execution    | Run malicious code attempting to access the server file system. | Code execution blocked in the sandbox environment.                 |
+```
+
+--
+
+## 6. Test Summary Report
+
+### 6.1 Test Summary
 This section summarizes the testing activities, including the number of test cases executed, passed, and failed.
 
-### 5.2 Defect Summary
+### Testing Workflow
+
+```mermaid
+flowchart TD
+  A[Requirement Analysis] --> B[Test Case Design]
+  B --> C[Test Environment Setup]
+  C --> D[Execution of Test Cases]
+  D --> E[Defect Reporting]
+  E --> F[Test Case Re-execution]
+  F --> G[Sign-off and Deployment]
+```
+
+
+### 6.2 Defect Summary
 This section provides a summary of the defects identified during testing, including severity and status.
+
+### Defect Lifecycle
+
+```mermaid
+stateDiagram-v2
+  [*] --> New
+  New --> Assigned : Developer Assigned
+  Assigned --> In Progress : Under Development
+  In Progress --> Resolved : Fix Verified
+  Resolved --> Closed : Passed Testing
+  Resolved --> Reopened : Issue Recurs
+  Closed --> [*]
+```
+
+## Conclusion
+
+This test plan ensures comprehensive validation of the Hashcode Online Competitive Coding Platform. By rigorously testing all functional, performance, and security aspects, we aim to deliver a robust, engaging, and error-free platform to our users.
 
 ---
 
