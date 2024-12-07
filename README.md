@@ -42,7 +42,7 @@
     <td>LIT2023040</td>
     <td>Information Technology</td>
     <td><a href="mailto:lit2023040@iiitl.ac.in">lit2023040@iiitl.ac.in</a></td>
-    <td><a href="https://github.com/maneeshshukla"><img src="https://img.shields.io/badge/GitHub-Profile-blue?style=flat&logo=github"></a></td>
+    <td><a href="https://github.com/shuklamaneesh23"><img src="https://img.shields.io/badge/GitHub-Profile-blue?style=flat&logo=github"></a></td>
   </tr>
   <tr>
     <td><img src="https://github.com/identicons/YatinSharma.png" width="60px" height="60px"></td>
