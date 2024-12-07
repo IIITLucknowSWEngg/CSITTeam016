@@ -264,7 +264,7 @@ describe('Payment Processing', () => {
 
 ### 5.1 Functional Testing
 
-```markdown
+
 | Module                  | Test Case                                                   | Expected Outcome                                                   |
 |-------------------------|-------------------------------------------------------------|--------------------------------------------------------------------|
 | User Management System  | Register with valid and invalid credentials.                | Successful registration or appropriate error messages.             |
@@ -278,28 +278,28 @@ describe('Payment Processing', () => {
 | Code Evaluation         | Submit code in supported languages with valid/invalid solutions. | Correct output, performance metrics, and feedback displayed.       |
 | Community Features      | Post on discussion forums and interact with other users.    | Forum posts appear correctly and allow replies.                    |
 |                         | Upload solutions to the marketplace.                        | Solutions listed with appropriate monetization options.            |
-```
+
 
 ### 5.2 Performance Testing
 
-```markdown
+
 | Scenario                    | Test Case                                         | Expected Outcome                                                   |
 |-----------------------------|---------------------------------------------------|--------------------------------------------------------------------|
 | User Load Testing           | 500 simultaneous users logging in and browsing the platform. | Stable performance with minimal latency.                           |
 | Contest Load Testing        | 200 users participating in a live contest.        | Real-time updates and submissions processed within 2 seconds.      |
 | Code Evaluation Stress Test | 10,000 code submissions in an hour.               | Submissions evaluated within acceptable time limits (<5s per run). |
-```
+
 
 
 ### 5.3 Security Testing
 
-```markdown
+
 | Module            | Test Case                                         | Expected Outcome                                                   |
 |-------------------|---------------------------------------------------|--------------------------------------------------------------------|
 | User Management   | Attempt brute-force login attempts.               | User account locked after 5 failed attempts.                       |
 | Payment System    | Simulate malicious transaction injections.        | Transactions rejected with error logs.                             |
 | Code Execution    | Run malicious code attempting to access the server file system. | Code execution blocked in the sandbox environment.                 |
-```
+
 
 --
 
