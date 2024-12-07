@@ -95,21 +95,6 @@ The project aims to create a CodeForces-like competitive programming platform, p
 - **Issue Link**: [CSITTeam016 - CodeForces Arena Clone Approval](https://github.com/IIITLucknowSWEngg/Assignment/issues/1)
 - **Repository**: [GitHub Repository - CSITTeam016](https://github.com/IIITLucknowSWEngg/CSITTeam016)
 
-## 🛠️ Assignment Deliverables
-
-### 1. Project Scope (project.md)
-   - Outlines the platform's functionalities and the scope of development.
-   
-### 2. Stakeholders (stake.md)
-   - Details various stakeholders, including users, administrators, and developers.
-   
-### 3. User Requirements Document (URD.md)
-   - Specifies the user expectations and system functions based on user interactions.
-   
-### 4. Software Requirements Specification (SRS.md)
-   - Elaborates on functional and non-functional requirements, including system constraints and NFRs.
-
-Refer to the [Software Engineering Body of Knowledge (SWEBOK)](https://www.computer.org/education/bodies-of-knowledge/software-engineering/v4) for guidance.
 
 ## 📊 Team Contributions
 Each team member has made their initial contributions to the repository. You can view individual contributions through the [Contributors](https://github.com/IIITLucknowSWEngg/CSITTeam016/graphs/contributors) page.
