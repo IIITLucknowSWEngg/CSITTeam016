@@ -76,7 +76,7 @@
 **HashCode** : Competitive Coding Platform
 
 ### Description
-The project aims to create a CodeForces-like competitive programming platform, providing users with the experience of algorithmic problem-solving in a controlled and gamified environment. The platform enables users to participate in contests, view problem archives, and track personal progress, focusing on accessible, high-performance web design.
+The project aims to create a CodeForces-like competitive programming platform, providing users with the experience of algorithmic problem-solving. The platform enables users to participate in contests, view problem archives, and track personal progress.
 
 ### Project Scope
 - **Included:**
@@ -92,7 +92,7 @@ The project aims to create a CodeForces-like competitive programming platform, p
   - **Offline functionality**: The platform is web-based and requires internet access.
 
 ### 🔗 Project Approval
-- **Issue Link**: [CSITTeam016 - CodeForces Arena Clone Approval](https://github.com/IIITLucknowSWEngg/CSITTeam016/issues/XX)
+- **Issue Link**: [CSITTeam016 - CodeForces Arena Clone Approval](https://github.com/IIITLucknowSWEngg/Assignment/issues/1)
 - **Repository**: [GitHub Repository - CSITTeam016](https://github.com/IIITLucknowSWEngg/CSITTeam016)
 
 ## 🛠️ Assignment Deliverables
