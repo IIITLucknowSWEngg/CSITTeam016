@@ -2,7 +2,7 @@
 
 # Software Test Documentation
 ## Hashcode: A Modern Competitive Programming Platform
-
+**Ensuring a Robust and Scalable Platform through Comprehensive Testing**  
 
 
 ## Table of Contents
@@ -70,17 +70,13 @@ A test case is marked as **Pass** if actual outcomes match expected results. A t
 
 ### **1.8 Test Environment**
 
-Hardware and Software Requirements
-
-
-| Component            | Details                          |
-|----------------------|----------------------------------|
-| Web Browsers         | Chrome (v114+), Firefox (v98+), Edge |
-| Operating Systems    | Windows 10/11, macOS 12+, Linux  |
-| Server Environment   | AWS (EC2, RDS, S3)               |
-| Databases            | PostgreSQL (v13+)                |
-| Programming Languages| Node.js (v16+), React.js (v18+)  |
-| Testing Tools        | Selenium, Postman, JMeter        |
+| Component             | Details                              |  
+|-----------------------|--------------------------------------|  
+| **Client Systems**    | Chrome (v114+), Firefox (v98+), Edge |  
+| **Server Environment**| AWS (EC2, RDS, S3)                  |  
+| **Databases**         | PostgreSQL (v13+)                   |  
+| **Code Sandbox**      | Secure, isolated execution environment |  
+| **Testing Tools**     | Selenium, Postman, JMeter           |  
 
 
 Environment Configuration
@@ -103,8 +99,8 @@ graph LR
 
 ## **2. Test Design Specification**  
 
-### **2.1 Test Design Overview**  
-The test design is based on functional, performance, and security requirements of the platform. Each test ensures compliance with expected behavior, especially in critical areas such as contest ranking and payment processing.  
+### **2.1 Test Design Overview** 
+This design ensures compliance with functional, performance, and security requirements, targeting critical modules such as contest rankings and payment processing.  
 
 ---
 
@@ -115,11 +111,11 @@ The test design is based on functional, performance, and security requirements o
 - **Payment Processing**: Safe wallet transactions and prize distributions.  
 
 ```mermaid
-flowchart TD  
-    A[User Management] --> B[Wallet Transactions]  
-    B --> C[Contest Management]  
-    C --> D[Code Evaluation]  
-    D --> E[Prize Distribution]  
+flowchart TD
+    A[User Management] -->|Create & Manage Accounts| B[Wallet Transactions]
+    B -->|Entry Fee Payments| C[Contest Management]
+    C -->|Join & Participate in Contests| D[Code Evaluation]
+    D -->|Evaluate Submissions| E[Prize Distribution] 
 ```
 ---
 
@@ -249,9 +245,9 @@ describe('Payment Processing', () => {
 4. Verify contest enrollment and accessibility.
 
 ### 4.3 Code Evaluation Procedure
-1. Participate in a contest.
-2. Submit a code solution.
-3. Verify code execution and result display.
+1. Submit a code solution during an active contest.  
+2. Verify sandbox execution.  
+3. Check if results display correctly within defined time limits. 
 
 ### 4.4 Payment Processing Procedure
 1. Ensure sufficient wallet balance.
@@ -261,6 +257,12 @@ describe('Payment Processing', () => {
 ---
 
 ## 5. Test Scenarios
+
+| Scenario                    | Test Case                          | Expected Outcome                        |  
+|-----------------------------|-------------------------------------|----------------------------------------|  
+| User Load Testing           | 500 simultaneous users logging in  | Latency < 200ms, No server crashes     |  
+| Contest Load Testing        | 200 users in a live contest        | Submissions processed < 2 seconds       |  
+
 
 ### 5.1 Functional Testing
 
@@ -327,14 +329,14 @@ This section provides a summary of the defects identified during testing, includ
 ### Defect Lifecycle
 
 ```mermaid
-stateDiagram-v2
-  [*] --> New
-  New --> Assigned : Developer Assigned
-  Assigned --> In Progress : Under Development
-  In Progress --> Resolved : Fix Verified
-  Resolved --> Closed : Passed Testing
-  Resolved --> Reopened : Issue Recurs
-  Closed --> [*]
+stateDiagram-v2  
+  [*] --> New  
+  New --> Assigned : Developer Assigned  
+  Assigned --> In Progress : Under Development  
+  In Progress --> Resolved : Fix Verified  
+  Resolved --> Closed : Passed Testing  
+  Resolved --> Reopened : Issue Recurs After Testing  
+  Closed --> [*] 
 ```
 
 ## Conclusion
