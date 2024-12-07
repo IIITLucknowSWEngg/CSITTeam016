@@ -8,7 +8,13 @@
 
 ## Executive Summary
 
-Hashcode aims to revolutionize the competitive programming landscape by providing a robust, scalable platform that combines the rigor of algorithmic challenges with the engagement of a vibrant community. Drawing inspiration from successful platforms like Codeforces, LeetCode, and HackerRank, Hashcode addresses the growing demand for high-quality programming practice and assessment tools.
+Hashcode is set to redefine the competitive programming landscape by offering a robust, scalable, and feature-rich platform for developers worldwide. Combining algorithmic rigor with community engagement, it caters to both individual programmers and organizations. Inspired by leading platforms such as Codeforces, LeetCode, and HackerRank, Hashcode bridges gaps in reliability, accessibility, and innovation.
+
+The platform aims to deliver:
+
+- Seamless hosting of real-time contests
+- Comprehensive tools for learning and assessment
+- A vibrant community fostering collaboration and innovation
 
 ---
 
@@ -16,13 +22,21 @@ Hashcode aims to revolutionize the competitive programming landscape by providin
 
 ### 1.1 Purpose and Scope
 
-This URD outlines the comprehensive requirements for Hashcode, a next-generation competitive programming platform. The document serves as the foundation for system design, development, and validation, ensuring alignment between stakeholder needs and platform capabilities.
+The purpose of this document is to articulate the requirements for Hashcode with clarity and precision. It serves as the baseline for development, testing, and deployment while addressing the needs of stakeholders.
 
 **Key Objectives:**
-- Create a reliable platform for hosting real-time programming contests
-- Provide a comprehensive learning environment for algorithmic problem-solving
+- Develop a highly reliable platform for live contests.
+- Provide a comprehensive learning hub for algorithmic problem-solving
 - Foster a collaborative community of programmers
-- Enable organizations to conduct technical assessments efficiently
+- Enable organisations to conduct technical assessments efficiently
+
+
+**Scope**
+- Individual problem-solving with analytics and progress tracking.
+- Diverse contest formats with real-time scoring.
+- Organisational needs, such as candidate evaluation and bulk testing.
+- Educational tools for instructors and learners.
+
 
 ### 1.2 Market Context
 
@@ -60,20 +74,20 @@ graph LR
   - Participate in rated contests
   - Achieve high ranking
 - **Pain Points**:
+  - Platform downtime during contests
   - Inconsistent judging systems
   - Limited feedback on solutions
-  - Platform downtime during contests
 
 #### 2.1.2 Corporate Recruiter - "Sarah"
 - **Background**: Technical Recruiter at a Fortune 500 company
 - **Goals**:
-  - Host company-specific contests
+  - Host large scale, company-specific contests
   - Access detailed candidate performance analytics
   - Customize problem sets for assessment
 - **Pain Points**:
-  - Difficulty in managing large-scale contests
+  - Difficulty in managing large-scale contests logistics
   - Limited candidate evaluation metrics
-  - Integration with HR systems
+  - Lack of integration with HR systems
 
 ### 2.2 Secondary Users
 
@@ -107,13 +121,17 @@ sequenceDiagram
     S->>U: Confirm Registration
 ```
 
-**Required Features:**
+**Required Features for contest creation :**
 1. Contest scheduling with timezone support
 2. Multiple contest formats:
    - Standard (2-3 hours)
    - Long Challenge (1-7 days)
    - Short Sprint (30-60 minutes)
 3. Customizable scoring systems
+
+**Required Features for Participant Management :**
+1. Pre-registration and waitlisting
+2. Automated reminders and notifications
 
 ### 3.2 Code Submission System 🔴
 
@@ -215,6 +233,10 @@ graph TD
 
 ### 4.2 Code Execution Security
 
+- Use of containerized sandboxes to isolate user code execution.
+- Automated resource capping to prevent denial-of-service (DoS) attacks.
+- Static and dynamic security checks for code submissions.
+
 ```mermaid
 graph LR
     A[User Code] --> B[Sandbox Environment]
@@ -295,7 +317,7 @@ graph TD
 
 ### 8.1 Planned Features
 
-1. **AI-Powered Code Analysis**
+1. **AI-Driven Analysis**
    - Automated code review
    - Performance optimization suggestions
    - Pattern recognition for similar solutions
