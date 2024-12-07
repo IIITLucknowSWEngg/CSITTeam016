@@ -66,7 +66,7 @@
     <td>LCS2023005</td>
     <td>Computer Science</td>
     <td><a href="mailto:lcs2023005@iiitl.ac.in">lcs2023005@iiitl.ac.in</a></td>
-    <td><a href="https://github.com/yuwanshbansal"><img src="https://img.shields.io/badge/GitHub-Profile-blue?style=flat&logo=github"></a></td>
+    <td><a href="https://github.com/YuwanshB005"><img src="https://img.shields.io/badge/GitHub-Profile-blue?style=flat&logo=github"></a></td>
   </tr>
 </table>
 
