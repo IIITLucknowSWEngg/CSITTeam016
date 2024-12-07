@@ -1,7 +1,7 @@
 ### Architecture of Hashcode Platform
 
 #### Introduction
-This document provides an in-depth architectural overview of the Hashcode platform, a next-generation competitive programming ecosystem. It focuses on detailing the various components and their interactions, with the intent to ensure scalability, reliability, and optimal user experience. The architectural diagrams are meticulously crafted to reflect a real-world implementation.
+This document provides an in-depth architectural overview of the Hashcode platform. It focuses on detailing the various components and their interactions, with the intent to ensure scalability, reliability, and optimal user experience. 
 
 ### System Context Diagram
 
