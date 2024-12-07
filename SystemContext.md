@@ -1,7 +1,7 @@
 
 
 
-# System Context Diagram of Upsolve
+# System Context Diagram of HashCode
 
 ## Overview
 
