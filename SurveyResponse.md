@@ -25,6 +25,15 @@ This survey was conducted to gather feedback on the usability, features, and ove
 
 ## Data Analysis
 
+### BASIC OVERVIEW
+![803789b7-a626-4c72-bbd8-ff1a1833639c](https://github.com/user-attachments/assets/260a43f0-ed6f-4108-9e20-7cde8c520332)
+![4e95c23c-46e3-4db5-b498-117a3096049e](https://github.com/user-attachments/assets/abb14da7-54ce-4311-9974-c861874bf743)
+![c68d404e-fa24-48bb-8aee-cdd488f376fc](https://github.com/user-attachments/assets/1f4766d4-dd29-4e9b-913c-7b02686576ed)
+![97aa1bb3-87d5-47d8-8d04-f62058ebfb1a](https://github.com/user-attachments/assets/244f51d3-6a98-49fa-ac9d-7e649937e9c4)
+
+
+
+
 
 ### 1. **How important is the performance and uptime of the platform during contests?**
 ![image](https://github.com/user-attachments/assets/0e7cef4d-85f2-41ca-bf16-9ab5e440e7c1)
