@@ -35,41 +35,19 @@ Our goal is to revolutionize competitive programming by offering an intuitive, e
 An enhanced user management system that prioritizes security, personalization, and financial integration:
 - **Smart Authentication**: Includes multi-factor authentication and email verification for security.
 - **OAuth Integration**: Allows users to log in with Google, GitHub, or other supported services.
-- **Wallet Integration**: Secure digital wallet for contest entries, earnings, and withdrawals.
 - **Personalized Profiles**: Comprehensive dashboards displaying solved problems, language preferences, skill ratings, achievement badges, and earnings history.
-- **Custom Rating System**: Combines performance ratings with monetary achievements.
 
 ### 2. Monetized Contest Environment ⚔️💰
 
-A revolutionary contest system that adds financial stakes to competitive programming:
-
-```mermaid
-graph LR
-    A[User Joins Monetized Contest] --> B[Entry Fee Payment]
-    B --> C[Problem Selection]
-    C --> D[Code Submission]
-    D --> E[Real-time Evaluation]
-    E --> F[Prize Pool Distribution]
-```
-
-Key monetization components:
-- **Stake-based Contests**: 
   - Users can enter contests by paying an entry fee
   - Entry fees are pooled to create prize money for top performers
   - Transparent prize distribution based on ranking and performance
-- **Tiered Monetary Rewards**: 
-  - Different contest tiers with varying entry fees and prize pools
-  - Ensures opportunities for programmers at all skill levels
-- **Skill-based Matchmaking**: Contests matched by rating to ensure fair competition
-- **Anti-cheating Measures**: Advanced plagiarism detection and monitoring to maintain contest integrity
+
 
 ### 3. Problem Archive 📚
 
 Enhanced problem archive with improved learning and earning potential:
 - **Difficulty-based Categorization**: Problems range from Easy (800-1100), Medium (1200-1500), to Hard (1600+).
-- **Monetized Practice Challenges**: 
-  - Optional paid challenges with smaller prize pools
-  - Allows users to earn while practicing
 - **Topic-wise Organization**: Problems categorized by technical domains
 - **Solution Hints and Editorials**: Provides learning resources
 - **Practice Mode**: Unlimited attempts with performance tracking
@@ -79,20 +57,15 @@ Enhanced problem archive with improved learning and earning potential:
 Robust evaluation system with enhanced features:
 - **Multi-language Support**: Python 3.8+, C++ 17/20, Java 11/17, JavaScript
 - **Sandboxed Execution**: Secure code evaluation
-- **Detailed Performance Analytics**: 
-  - Comprehensive code performance metrics
-  - Insights for skill improvement
-  - Potential monetization of high-quality solutions
+- 
 
-### 5. Community and Earning Features 🤝💸
+### 5. Community  🤝💸
 
 Community features that promote learning and financial opportunities:
 - **Discussion Forums**: Problem-specific discussion boards
 - **Solution Marketplace**: 
   - Users can sell high-quality problem solutions
   - Rewards for creating valuable educational content
-- **Referral Program**: 
-  - Earn credits or a percentage of referral's first contest entry
 - **Achievement System**: 
   - Monetary rewards for reaching specific milestones
   - Badges and recognition for top performers
@@ -102,20 +75,18 @@ Community features that promote learning and financial opportunities:
 ### What We're Building 🎯
 1. **Core Platform**
    - Monetized contest management
-   - Secure payment integration
    - Comprehensive problem repository
    - Fair and transparent prize distribution system
 
 2. **Financial Features**
-   - Secure digital wallet
+
    - Multiple payment method support
    - Transparent fee and prize tracking
-   - Withdrawal mechanisms
 
 3. **User Experience**
    - Responsive, intuitive web interface
    - Real-time contest and earnings tracking
-   - Performance and financial dashboards
+   - Performance dashboards
 
 ### What We're Not Building ⛔
 1. **Advanced Features**
@@ -127,25 +98,6 @@ Community features that promote learning and financial opportunities:
    - Direct bank transfers
    - Advanced financial derivatives
 
-## Technical Architecture
-
-```mermaid
-graph TD
-    A[Web Interface] -->|Secure Channels| B[Application Server]
-    B --> C[Authentication Service]
-    B --> D[Contest & Payment Manager]
-    D --> I[Payment Gateway]
-    B --> E[Code Executor]
-    E -->|Sandbox| F[Judge System]
-    B --> G[Database]
-    B --> H[Cache Layer]
-    B --> J[Wallet Service]
-```
-
-Additional architectural considerations:
-- Secure, scalable payment infrastructure
-- Robust fraud detection mechanisms
-- Compliance with financial regulations
 
 ## References & Inspiration
 
