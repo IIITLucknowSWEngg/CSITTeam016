@@ -1,9 +1,7 @@
 
-
 # Software Test Documentation
 ## Hashcode: A Modern Competitive Programming Platform
 **Ensuring a Robust and Scalable Platform through Comprehensive Testing**  
-
 
 ## Table of Contents
 | Section | Title |
@@ -20,7 +18,7 @@
 ## **1. Test Plan**  
 
 ### **1.1 Introduction**  
-The purpose of this document is to outline the testing strategy, methodology, and test cases for the **Hashcode Online Competitive Programming Platform**, ensuring robust quality standards. This document follows the IEEE-829-2008 standard and uses a Behavior-Driven Development (BDD) approach.
+The purpose of this document is to outline the testing strategy, methodology, and test cases for the **Hashcode Online Competitive Programming Platform**, ensuring robust quality standards. This document covers both functional and non-functional requirements testing.
 
 ---
 
@@ -53,6 +51,9 @@ The testing process includes:
 3. **System Testing**: Testing the end-to-end functionality.  
 4. **Acceptance Testing**: Validating against user requirements.  
 5. **Performance Testing**: Ensuring scalability and responsiveness under load.  
+6. **Security Testing**: Verifying the platform's security measures.  
+7. **Usability Testing**: Ensuring the platform is user-friendly and accessible.
+8. **Reliability Testing**: Verifying system uptime and error handling.
 
 **Testing Style**: Behavior-Driven Development (BDD) using **Cucumber** for Gherkin-style test scenarios and **Chai** for assertions.  
 
@@ -67,7 +68,6 @@ A test case is marked as **Pass** if actual outcomes match expected results. A t
 - Testing will be **suspended** in the event of critical failures (e.g., server crashes, significant defects).  
 - Testing will **resume** after defect resolution and retesting of the impacted areas. 
 
-
 ### **1.8 Test Environment**
 
 | Component             | Details                              |  
@@ -77,7 +77,6 @@ A test case is marked as **Pass** if actual outcomes match expected results. A t
 | **Databases**         | PostgreSQL (v13+)                   |  
 | **Code Sandbox**      | Secure, isolated execution environment |  
 | **Testing Tools**     | Selenium, Postman, JMeter           |  
-
 
 Environment Configuration
 
@@ -91,10 +90,9 @@ graph LR
   A --> G[Code Sandbox]
 ```
 
-
 - Database : Preloaded with test data for user accounts, contests, and problems.
 - Code Sandbox : Configured for secure and isolated code execution.
-- Payment Gateway : Mock setup to simulate transactions without real-world implications..
+- Payment Gateway : Mock setup to simulate transactions without real-world implications.
 ---
 
 ## **2. Test Design Specification**  
@@ -263,9 +261,7 @@ describe('Payment Processing', () => {
 | User Load Testing           | 500 simultaneous users logging in  | Latency < 200ms, No server crashes     |  
 | Contest Load Testing        | 200 users in a live contest        | Submissions processed < 2 seconds       |  
 
-
 ### 5.1 Functional Testing
-
 
 | Module                  | Test Case                                                   | Expected Outcome                                                   |
 |-------------------------|-------------------------------------------------------------|--------------------------------------------------------------------|
@@ -281,9 +277,7 @@ describe('Payment Processing', () => {
 | Community Features      | Post on discussion forums and interact with other users.    | Forum posts appear correctly and allow replies.                    |
 |                         | Upload solutions to the marketplace.                        | Solutions listed with appropriate monetization options.            |
 
-
 ### 5.2 Performance Testing
-
 
 | Scenario                    | Test Case                                         | Expected Outcome                                                   |
 |-----------------------------|---------------------------------------------------|--------------------------------------------------------------------|
@@ -291,10 +285,7 @@ describe('Payment Processing', () => {
 | Contest Load Testing        | 200 users participating in a live contest.        | Real-time updates and submissions processed within 2 seconds.      |
 | Code Evaluation Stress Test | 10,000 code submissions in an hour.               | Submissions evaluated within acceptable time limits (<5s per run). |
 
-
-
 ### 5.3 Security Testing
-
 
 | Module            | Test Case                                         | Expected Outcome                                                   |
 |-------------------|---------------------------------------------------|--------------------------------------------------------------------|
@@ -302,8 +293,32 @@ describe('Payment Processing', () => {
 | Payment System    | Simulate malicious transaction injections.        | Transactions rejected with error logs.                             |
 | Code Execution    | Run malicious code attempting to access the server file system. | Code execution blocked in the sandbox environment.                 |
 
+### 5.4 Usability Testing
 
---
+| Scenario                     | Test Case                                         | Expected Outcome                                                   |
+|------------------------------|---------------------------------------------------|--------------------------------------------------------------------|
+| User Interface Consistency   | Navigate through various sections of the platform. | Consistent layout and navigation.                                  |
+| Accessibility Features       | Use screen reader and keyboard navigation.        | All features accessible via screen reader and keyboard.            |
+| User Documentation           | Follow user manuals and in-platform help.         | Clear and helpful guidance available for all tasks.                |
+
+### 5.5 Reliability Testing
+
+| Scenario                      | Test Case                                         | Expected Outcome                                                   |
+|-------------------------------|---------------------------------------------------|--------------------------------------------------------------------|
+| System Uptime                 | Monitor system uptime over a month.               | 99.9% uptime achieved.                                             |
+| Automated Backups             | Test data recovery from backups.                  | Successful data recovery within defined time.                      |
+| Failover Mechanisms           | Simulate server failures.                         | System switches to backup servers without data loss.               |
+| Error Handling                | Introduce various errors.                         | Graceful degradation and user-friendly error messages displayed.   |
+
+### 5.6 Scalability Testing
+
+| Scenario                      | Test Case                                         | Expected Outcome                                                   |
+|-------------------------------|---------------------------------------------------|--------------------------------------------------------------------|
+| Horizontal Scaling            | Add additional servers during peak load.          | System performance improves with added servers.                    |
+| Vertical Scaling              | Increase server resources during peak load.       | System performance improves with increased resources.              |
+| Load Testing                  | Simulate peak user load and data volume.          | Stable performance and efficient resource management.              |
+
+---
 
 ## 6. Test Summary Report
 
@@ -321,7 +336,6 @@ flowchart TD
   E --> F[Test Case Re-execution]
   F --> G[Sign-off and Deployment]
 ```
-
 
 ### 6.2 Defect Summary
 This section provides a summary of the defects identified during testing, including severity and status.
@@ -341,7 +355,7 @@ stateDiagram-v2
 
 ## Conclusion
 
-This test plan ensures comprehensive validation of the Hashcode Online Competitive Coding Platform. By rigorously testing all functional, performance, and security aspects, we aim to deliver a robust, engaging, and error-free platform to our users.
+This test plan ensures comprehensive validation of the Hashcode Online Competitive Coding Platform. By rigorously testing all functional, performance, security, usability, reliability, and scalability aspects, we aim to deliver a robust, secure, and user-friendly platform.
 
 ---
 
@@ -354,3 +368,4 @@ This test plan ensures comprehensive validation of the Hashcode Online Competiti
 
 Documented by Team InnovateCS  
 IIIT Lucknow - Software Engineering Project 2024
+
