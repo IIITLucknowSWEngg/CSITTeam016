@@ -1,4 +1,3 @@
-
 # Software Test Documentation
 ## Hashcode: A Modern Competitive Programming Platform
 **Ensuring a Robust and Scalable Platform through Comprehensive Testing**  
@@ -18,7 +17,7 @@
 ## **1. Test Plan**  
 
 ### **1.1 Introduction**  
-The purpose of this document is to outline the testing strategy, methodology, and test cases for the **Hashcode Online Competitive Programming Platform**, ensuring robust quality standards. This document covers both functional and non-functional requirements testing.
+The purpose of this document is to outline the testing strategy, methodology, and test cases for the **Hashcode Online Competitive Programming Platform**, ensuring robust quality standards. This document aims to cover all aspects of testing to ensure a reliable, secure, and user-friendly platform.
 
 ---
 
@@ -52,7 +51,7 @@ The testing process includes:
 4. **Acceptance Testing**: Validating against user requirements.  
 5. **Performance Testing**: Ensuring scalability and responsiveness under load.  
 6. **Security Testing**: Verifying the platform's security measures.  
-7. **Usability Testing**: Ensuring the platform is user-friendly and accessible.
+7. **Usability Testing**: Ensuring the platform is user-friendly and accessible.  
 8. **Reliability Testing**: Verifying system uptime and error handling.
 
 **Testing Style**: Behavior-Driven Development (BDD) using **Cucumber** for Gherkin-style test scenarios and **Chai** for assertions.  
@@ -226,6 +225,88 @@ describe('Payment Processing', () => {
 });
 ```
 
+### 3.5 User Management System
+
+```gherkin
+Feature: User Management System
+
+  Scenario: Register with valid and invalid credentials
+    Given a new user is on the registration page
+    When the user enters valid registration details
+    Then the user account should be created
+    And a verification email should be sent
+
+  Scenario: Authenticate using Google and GitHub OAuth
+    Given a user is on the login page
+    When the user selects Google OAuth
+    Then the user should be logged in through Google
+
+    Given a user is on the login page
+    When the user selects GitHub OAuth
+    Then the user should be logged in through GitHub
+
+  Scenario: Add funds to wallet and view transaction history
+    Given a user is on the wallet page
+    When the user adds funds to the wallet
+    Then the wallet balance should be updated
+    And the transaction should be recorded in the transaction history
+```
+
+### 3.6 Contest Participation
+
+```gherkin
+Feature: Contest Participation
+
+  Scenario: Pay entry fees and join contests
+    Given a registered user is on the contest page
+    When the user selects a contest and pays the entry fee
+    Then the user should be enrolled in the contest
+
+  Scenario: Submit solutions during active contests
+    Given a user is participating in a contest
+    When the user submits a code solution
+    Then the solution should be evaluated and ranked
+
+  Scenario: Receive prizes and view prize distribution details
+    Given a user has won a contest
+    When the contest ends
+    Then the prize should be distributed
+    And the user should be able to view the prize distribution details
+```
+
+### 3.7 Problem Archive
+
+```gherkin
+Feature: Problem Archive
+
+  Scenario: Access problems by difficulty or topic
+    Given a user is on the problem archive page
+    When the user filters problems by difficulty or topic
+    Then the problems should be listed correctly
+
+  Scenario: View editorial and hints after solving
+    Given a user has solved a problem
+    When the user views the problem details
+    Then the editorial and hints should be available
+```
+
+### 3.8 Community Features
+
+```gherkin
+Feature: Community Features
+
+  Scenario: Post on discussion forums and interact with other users
+    Given a user is on the discussion forum page
+    When the user creates a new post
+    Then the post should appear correctly
+    And other users should be able to reply
+
+  Scenario: Upload solutions to the marketplace
+    Given a user has solved a problem
+    When the user uploads the solution to the marketplace
+    Then the solution should be listed with appropriate monetization options
+```
+
 ---
 
 ## 4. Test Procedure Specification
@@ -251,6 +332,19 @@ describe('Payment Processing', () => {
 1. Ensure sufficient wallet balance.
 2. Initiate a transaction.
 3. Verify transaction processing and balance update.
+
+### 4.5 User Management System Procedure
+1. Register with valid and invalid credentials.
+2. Authenticate using Google and GitHub OAuth.
+3. Add funds to wallet and view transaction history.
+
+### 4.6 Problem Archive Procedure
+1. Access problems by difficulty or topic.
+2. View editorial and hints after solving.
+
+### 4.7 Community Features Procedure
+1. Post on discussion forums and interact with other users.
+2. Upload solutions to the marketplace.
 
 ---
 
@@ -355,7 +449,7 @@ stateDiagram-v2
 
 ## Conclusion
 
-This test plan ensures comprehensive validation of the Hashcode Online Competitive Coding Platform. By rigorously testing all functional, performance, security, usability, reliability, and scalability aspects, we aim to deliver a robust, secure, and user-friendly platform.
+This test plan ensures comprehensive validation of the Hashcode Online Competitive Coding Platform. By rigorously testing all functional, performance, security, usability, reliability, and scalability aspects, we aim to deliver a robust and user-friendly platform.
 
 ---
 
@@ -368,4 +462,5 @@ This test plan ensures comprehensive validation of the Hashcode Online Competiti
 
 Documented by Team InnovateCS  
 IIIT Lucknow - Software Engineering Project 2024
+
 
