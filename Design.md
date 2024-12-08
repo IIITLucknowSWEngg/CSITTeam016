@@ -114,44 +114,6 @@ The architecture includes the following components:
 ![image](https://github.com/user-attachments/assets/8cd0df10-dba2-40c8-8602-c72c48b59038)
 
 
-#### Tables:
-- **Users**:  
-  ```sql
-  CREATE TABLE Users (
-    userId SERIAL PRIMARY KEY,
-    username VARCHAR(50) UNIQUE NOT NULL,
-    email VARCHAR(100) UNIQUE NOT NULL,
-    passwordHash VARCHAR(255) NOT NULL,
-    rating INT DEFAULT 0
-  );
-  ```
-
-- **Contests**:  
-  ```sql
-  CREATE TABLE Contests (
-    contestId SERIAL PRIMARY KEY,
-    title VARCHAR(100) NOT NULL,
-    startTime TIMESTAMP NOT NULL,
-    endTime TIMESTAMP NOT NULL
-  );
-  ```
-
-- **Submissions**:  
-  ```sql
-  CREATE TABLE Submissions (
-    submissionId SERIAL PRIMARY KEY,
-    userId INT REFERENCES Users(userId),
-    contestId INT REFERENCES Contests(contestId),
-    problemId INT NOT NULL,
-    status VARCHAR(50),
-    timestamp TIMESTAMP DEFAULT NOW()
-  );
-  ```
-
----
-
-
-
 
 ## 7. Expected Design 
 
