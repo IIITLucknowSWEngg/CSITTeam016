@@ -66,40 +66,20 @@ graph LR
 
 ### 2.1 Primary Users
 
-#### 2.1.1 Competitive Programmer - "Alex"
+#### 2.1.1 Competitive Programmer - "Mayank"
 - **Background**: Computer Science student, 20 years old
-- **Goals**: 
-  - Improve algorithmic problem-solving skills
-  - Participate in rated contests
-  - Achieve high ranking
 - **Pain Points**:
   - Platform downtime during contests
   - Inconsistent judging systems
   - Limited feedback on solutions
-
-#### 2.1.2 Corporate Recruiter - "Sarah"
-- **Background**: Technical Recruiter at a Fortune 500 company
-- **Goals**:
-  - Host large-scale, company-specific contests
-  - Access detailed candidate performance analytics
-  - Customize problem sets for assessment
+ 
+#### 2.1.2 Competitive Programmer - "Karan"
+- **Background**: Information technology student, 20 years old
 - **Pain Points**:
-  - Difficulty in managing large-scale contests logistics
-  - Limited candidate evaluation metrics
-  - Lack of integration with HR systems
+  - Regular Cheating in contest
+  - Plagiarism Detection
+  - Repeated Questions
 
-### 2.2 Secondary Users
-
-#### 2.2.1 Content Creator - "Prof. Zhang"
-- **Background**: University Professor
-- **Goals**:
-  - Create educational problem sets
-  - Monitor student progress
-  - Share teaching resources
-- **Pain Points**:
-  - Complex problem creation interface
-  - Limited collaborative features
-  - Inadequate plagiarism detection
 
 ---
 
@@ -111,13 +91,12 @@ The following table summarizes the user requirements gathered from personal inte
 |-------------------------|----------------------------------|-----------------------------------------------------------------------------------------------|
 | Competitive Programmers | Real-time contest hosting        | Ability to participate in real-time contests with minimal downtime.                           |
 | Competitive Programmers | Detailed feedback                | Receive consistent and detailed feedback on submitted solutions.                              |
-| Corporate Recruiters    | Large-scale contest management   | Tools to manage and host large-scale contests efficiently.                                    |
-| Corporate Recruiters    | Performance analytics            | Access to detailed analytics on candidate performance.                                        |
-| Content Creators        | Intuitive problem creation       | A user-friendly interface for creating and managing problem sets.                             |
-| Content Creators        | Plagiarism detection             | Robust mechanisms to detect and prevent plagiarism.                                           |
-| Educational Institutions| Bulk registration                | Facility to register multiple students for private contests easily.                           |
-| Educational Institutions| Progress tracking                | Tools to monitor and track student progress over time.                                        |
-| System Administrators   | System health monitoring         | Real-time monitoring of system health and performance.                                        |
+| Competitive Programmers | Large-scale contest management   | Tools to manage and host large-scale contests efficiently.                                    |
+| Competitive Programmers | Performance analytics            | Access to detailed analytics on candidate performance.                                        |
+| Competitive Programmers | Intuitive problem creation       | A user-friendly interface for creating and managing problem sets.                             |
+| Competitive Programmers | Plagiarism detection             | Robust mechanisms to detect and prevent plagiarism.                                           |
+| Students                | Progress tracking                | Tools to monitor and track student progress over time.                                        |
+| Developer               | System health monitoring         | Real-time monitoring of system health and performance.                                        |
 | General Public          | Learning resources               | Access to tutorials and learning materials for algorithmic problem-solving.                   |
 
 ---
