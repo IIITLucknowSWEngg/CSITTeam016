@@ -1,4 +1,4 @@
-## Cross-Reference Matrix for Codeforces Clone Project
+## Cross-Reference Matrix for HashCode Project
 
 | Requirement ID | Requirement Description | System Component | Design Section | Test Case ID | Test Case Description | Stakeholder Impact |
 |---------------|------------------------|-----------------|----------------|--------------|----------------------|---------------------|
