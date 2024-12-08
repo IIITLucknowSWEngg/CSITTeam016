@@ -1,10 +1,4 @@
 # User Requirements Document (URD)
-## Hashcode: A Modern Competitive Programming Platform
-### Version 1.0 | December 2024
-
-![Document Status](https://img.shields.io/badge/Status-Draft-yellow.svg) ![Version](https://img.shields.io/badge/Version-1.0-blue.svg)
-
----
 
 ## Executive Summary
 
@@ -53,34 +47,131 @@ graph LR
     D --> E
 ```
 
-### 1.3 Document Conventions
+## 2.Stakeholder Perspectives
+### 2.1 Competitive Programmers
+**"I want a platform that..."**
+- Offers challenging and diverse problem sets
+- Provides real-time, accurate solution evaluation
+- Gives detailed feedback on my submissions
+- Tracks my progress and rankings
+- Prevents cheating and plagiarism
 
-| Priority Level | Description | Symbol |
-|---------------|-------------|---------|
-| Critical | Must have for MVP | 🔴 |
-| High | Important but not blocking | 🟡 |
-| Medium | Desired feature | 🟢 |
-| Low | Nice to have | ⚪ |
+**My Pain Points:**
+- Inconsistent judging systems
+- Platform downtime during critical contests
+- Limited learning resources
+- Lack of personalized feedback
+- Complex user interfaces
 
----
+### 2.2 Administrators
+**"I need tools that allow me to..."**
+- Manage contests efficiently
+- Moderate user-generated content
+- Monitor platform performance
+- Customize contest parameters
+- Generate comprehensive analytics
 
-## 2. User Personas
+**My Challenges:**
+- Handling large-scale contests
+- Ensuring fair competition
+- Managing user permissions
+- Tracking system health
+- Resolving technical issues quickly
 
-### 2.1 Primary Users
+### 2.3 Educational Institutions
+**"We require a platform that can..."**
+- Support bulk student registrations
+- Create private institutional contests
+- Generate detailed performance reports
+- Track student progress over time
+- Integrate with existing learning management systems
 
-#### 2.1.1 Competitive Programmer - "Mayank"
-- **Background**: Computer Science student, 20 years old
-- **Pain Points**:
-  - Platform downtime during contests
-  - Inconsistent judging systems
-  - Limited feedback on solutions
- 
-#### 2.1.2 Competitive Programmer - "Karan"
-- **Background**: Information technology student, 20 years old
-- **Pain Points**:
-  - Regular Cheating in contest
-  - Plagiarism Detection
-  - Repeated Questions
+**Our Concerns:**
+- Student assessment accuracy
+- Scalability during large-scale events
+- Customization for different educational needs
+- Protecting student data privacy
+
+### 2.4 Sponsors and Organizations
+**"We are looking for a platform that enables us to..."**
+- Host branded coding events
+- Assess technical skills
+- Gain insights into candidate performance
+- Customize contest parameters
+- Reach a large pool of talented programmers
+
+**Our Challenges:**
+- Limited branding options
+- Lack of detailed analytics
+- Complex event management
+- Difficulty in measuring candidate skills
+
+### 2.5 Mentors and Coaches
+**"I want a system that helps me..."**
+- Track student performance
+- Create custom problem sets
+- Provide personalized guidance
+- Monitor individual and team progress
+- Access comprehensive learning analytics
+
+**My Pain Points:**
+- Limited visibility into student problem-solving strategies
+- Lack of granular performance tracking
+- Time-consuming manual assessment
+
+### 2.6 System Administrators
+**"Our priorities are..."**
+- Ensuring high system availability
+- Implementing robust security measures
+- Monitoring server performance
+- Quick issue resolution
+- Scalable infrastructure
+
+**Our Challenges:**
+- Managing high-traffic events
+- Preventing security breaches
+- Maintaining system responsiveness
+- Handling concurrent user loads
+
+### 2.7 Event Organizers
+**"We need a platform that supports..."**
+- Easy event creation
+- Flexible contest formats
+- Real-time participant management
+- Scalable infrastructure
+- Comprehensive event analytics
+
+**Our Challenges:**
+- Complex event setup processes
+- Limited customization options
+- Handling international participants
+
+### 2.8 Open Source Contributors
+**"We want a platform with..."**
+- Clear contribution guidelines
+- Well-documented APIs
+- Active community engagement
+- Transparent development process
+- Opportunities to improve the platform
+
+**Our Motivations:**
+- Enhancing platform capabilities
+- Learning from collaborative development
+- Building a robust open-source project
+
+### 2.9 General Public
+**"I'm interested in..."**
+- Learning programming basics
+- Casual problem-solving
+- Free tutorials and resources
+- Low-barrier entry to coding challenges
+- Engaging and intuitive interface
+
+**My Expectations:**
+- Beginner-friendly content
+- Step-by-step learning paths
+- Supportive community
+- Free access to basic features
 
 
 ---
@@ -89,19 +180,21 @@ graph LR
 
 The following table summarizes the user requirements gathered from personal interviews with various stakeholders:
 
-| User                    | Requirement                      | Description                                                                                   |
-|-------------------------|----------------------------------|-----------------------------------------------------------------------------------------------|
-| Competitive Programmers | Real-time contest hosting        | Ability to participate in real-time contests with minimal downtime.                           |
-| Competitive Programmers | Detailed feedback                | Receive consistent and detailed feedback on submitted solutions.                              |
-| Competitive Programmers | Large-scale contest management   | Tools to manage and host large-scale contests efficiently.                                    |
-| Competitive Programmers | Performance analytics            | Access to detailed analytics on candidate performance.                                        |
-| Competitive Programmers | Intuitive problem creation       | A user-friendly interface for creating and managing problem sets.                             |
-| Competitive Programmers | Plagiarism detection             | Robust mechanisms to detect and prevent plagiarism.                                           |
-| Students                | Progress tracking                | Tools to monitor and track student progress over time.                                        |
-| Developer               | System health monitoring         | Real-time monitoring of system health and performance.                                        |
-| General Public          | Learning resources               | Access to tutorials and learning materials for algorithmic problem-solving.                   |
+| Stakeholder Group | Critical Requirements | Desired Features |
+|------------------|----------------------|-----------------|
+| Competitive Programmers | Real-time contest hosting, fair judging, detailed feedback | Advanced analytics, skill tracking |
+| Administrators | Contest management, user moderation | Customizable contest parameters |
+| Educational Institutions | Bulk registration, performance tracking | LMS integration |
+| Sponsors | Branding options, performance analytics | Customized assessments |
+| Mentors | Student progress tracking | Personalized learning paths |
+| System Administrators | High availability, security | Automated monitoring |
+| Event Organizers | Flexible contest formats | International support |
+| Open Source Contributors | Clear documentation | Community engagement tools |
+| General Public | Learning resources | Gamification elements |
+
 
 ---
+
 
 ## 4. Detailed Requirements
 
@@ -247,97 +340,3 @@ graph LR
 ```
 
 ---
-
-## 6. Integration Requirements 🟡
-
-### 6.1 External System Integration
-
-Our platform will integrate with tools you already use:
-
-1. **Version Control Systems**
-   - GitHub
-   - GitLab
-   - Bitbucket
-
-2. **Learning Management Systems**
-   - Canvas
-   - Moodle
-   - Blackboard
-
-3. **Authentication Providers**
-   - Google OAuth
-   - GitHub OAuth
-   - Microsoft Azure AD
-
----
-
-## 7. Maintenance and Support 🟢
-
-We’ll monitor system health 24/7, provide technical support for critical issues, and moderate community forums. Maintenance will be scheduled during off-peak hours.
-
-### 7.1 System Monitoring
-
-```mermaid
-graph TD
-    A[Monitoring System] --> B[Performance Metrics]
-    A --> C[Error Logging]
-    A --> D[User Analytics]
-    B --> E[Alert System]
-    C --> E
-    D --> F[Reporting Dashboard]
-```
-
-### 7.2 Support Requirements
-
-- 24/7 technical support for critical issues
-- Maximum 4-hour response time for contest-related issues
-- Community forum moderation
-- Regular system maintenance windows
-
----
-
-## 8. Future Considerations 🟢
-
-We’re planning:
-
-### 8.1 Planned Features
-
-1. **AI-Driven Analysis**
-   - Automated code review
-   - Performance optimization suggestions
-   - Pattern recognition for similar solutions
-
-2. **Advanced Analytics**
-   - Skill progression tracking
-   - Performance prediction
-   - Learning path recommendations
-
----
-
-## Document Control
-
-| Version | Date       | Author        | Changes         |
-|---------|------------|---------------|-----------------|
-| 1.0     | 2024-12-06 | Hashcode Team | Initial Release |
-| 1.1     | TBD        | -             | Planned Update  |
-
----
-
-## Appendices
-
-### Appendix A: Glossary of Terms
-
-| Term            | Definition                        |
-|-----------------|-----------------------------------|
-| Contest Rating  | A numerical value representing a user's performance |
-| Virtual Contest | A simulation of a past contest    |
-| Judge System    | Automated code evaluation system  |
-
-### Appendix B: Reference Documents
-
-1. IEEE 830-1998 Standard
-2. SWEBOK v3.0
-3. ISO/IEC/IEEE 29148:2018
-
-Refer to the [Software Engineering Body of Knowledge (SWEBOK)](https://www.computer.org/education/bodies-of-knowledge/software-engineering/v4) for guidance.
-
