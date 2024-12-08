@@ -90,6 +90,33 @@
   - An option to participate in beginner-level or casual contests.
 
 
+### All Stakeholders Table
+
+| Stakeholder Category | Stakeholder Type | Primary Role/Interest |
+|---------------------|-----------------|----------------------|
+| Primary Stakeholders | Competitive Programmers | Platform users solving problems and competing |
+| | Administrators | Manage platform, problems, and contests |
+| | Developers | Build and maintain the platform |
+| Secondary Stakeholders | Sponsors and Organizations | Sponsor contests and gain visibility |
+| | Educational Institutions | Use platform for training and assessments |
+| Tertiary Stakeholders | Mentors and Coaches | Guide competitive programmers |
+| | System Administrators | Manage server infrastructure |
+| Potential Stakeholders | Event Organizers | Host special competitive programming events |
+| | Open Source Contributors | Contribute to platform development |
+| | General Public | Casual users exploring coding problems |
+
+### Stakeholders Requiring System Login
+
+| Stakeholder Type | Likely Login Level/Access | Primary System Needs |
+|-----------------|---------------------------|----------------------|
+| Competitive Programmers | User-level access | Contest participation, problem solving, personal dashboard |
+| Platform Administrators | Admin-level access | Contest management, problem editing, user moderation |
+| Developers | Developer/Backend access | System configuration, code deployment, debugging |
+| Educational Institutions | Institutional admin access | Student management, private contest creation, performance tracking |
+| Mentors and Coaches | Instructor-level access | Student progress tracking, custom problem set creation |
+| System Administrators | Root/infrastructure access | Server monitoring, security management |
+| Event Organizers | Event management access | Custom event setup, participant management |
+
 
 ## RACI Matrix
 
