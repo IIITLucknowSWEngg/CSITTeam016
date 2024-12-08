@@ -1,138 +1,168 @@
 
 
-# Design Document for Hashcode
+# **Design Document for HashCode**
 
-## Table of Contents
+## **Table of Contents**
 | Section | Title |
 | ------- | ----- |
-| 1 | Introduction |
-| 2 | Design Principles |
-| 3 | System Architecture |
-| 4 | Detailed Design |
-| 5 | Activity Diagrams |
-| 6 | Expected Design |
-| 7 | References |
+| 1       | Introduction |
+| 2       | Design Principles |
+| 3       | System Architecture |
+| 4       | Detailed Design |
+| 5       | User Interface Design |
+| 6       | Backend Design |
+| 7       | Expected Design |
 
-## 1. Introduction
+---
 
-### 1.1 Purpose  
-This Software Design Document (SDD) defines the design specifications for the HashCode Competitive Programming Platform, structured in alignment with the principles and best practices of the **Software Engineering Body of Knowledge (SWEBOK)**, the **IEEE 1016 Standard for Software Design Descriptions**, and established SDD templates. This document provides a detailed blueprint for the platform's architecture and design, ensuring compliance with industry standards and supporting efficient development and maintenance.
+## **1. Introduction**
 
-### 1.2 Scope  
-The HashCode Competitive Programming Platform is engineered to deliver a **high-performance, scalable, and secure environment** for algorithmic problem-solving, closely mirroring the interactive experience of platforms such as Codeforces. This document outlines the core architectural components, technical design specifications, and system-level considerations to guide the platform's development lifecycle.
+### **1.1 Purpose**  
+This document defines the complete design specifications for the HashCode Competitive Programming Platform, covering both the system architecture and interface design. It serves as a guide for implementation while ensuring high usability, security, and maintainability.
 
-## 2. Design Principles
-The design principles guiding this project include:
-- **Modularity**: Independent modules for contests, user management, problem archives, and evaluation to ensure ease of maintenance and scalability.
-- **Reusability**: Designing components that can be reused across different parts of the system.
-- **Scalability**: Support for growing user bases and simultaneous contest participation through a robust backend architecture.
-- **Security**: Incorporating security measures to protect user data including secure authentication and system integrity.
-- **Maintainability**: Designing the system for ease of maintenance and updates.
-- **Performance Optimization**: Implementing caching mechanisms, efficient algorithms, and load balancing to ensure optimal performance.
+### **1.2 Scope**  
+HashCode aims to provide an intuitive, scalable, and efficient platform for competitive programming, delivering interactive features like those on Codeforces and LeetCode. This document details the **front-end appearance**, **back-end logic**, **database structure**, and **user workflows**.
 
-## 3. System Architecture
-The system architecture consists of the following components:
-- **Web Interface**: The front-end, developed using React.js with modern UI libraries for an intuitive and responsive user experience.
-- **Application Server**: The back-end, developed using Node.js/Express and managing APIs.
-- **Database**: A PostgreSQL database for storing structured data such as user profiles, contest details, and problem archives.
-- **Authentication Service**: Handles user authentication and authorization, implementing secure login methods and token management (e.g., JWT).
-- **Contest Engine**: Manages contest creation and execution.
-- **Judge System**: Evaluates code submissions.
+---
 
-![System Architecture](https://github.com/user-attachments/assets/1281457c-f7cc-4554-9637-e9abcfa70fc4)
+## **2. Design Principles**
 
-```plantuml
-@startuml
-actor User
-actor Admin
-actor Developer
-actor Sponsor
-actor Educator
-actor Mentor
+- **User-Centric Design**: Interfaces tailored for smooth navigation and user engagement.
+- **Scalable Backend**: Efficiently handles a growing number of participants.
+- **Interactive UI/UX**: Clear layouts, syntax-highlighting code editors, and real-time feedback.
+- **Security First**: Robust encryption, secure data management, and JWT authentication.
+- **Modularity**: Separation of concerns for independent scalability.
+- **Real-Time Updates**: WebSocket-based live scoreboard and submission updates.
 
-package "Hashcode Platform" {
-    [Web Interface]
-    [Application Server]
-    [Database]
-    [Authentication Service]
-    [Payment Gateway]
-    [Cache Layer]
-}
+---
 
-User --> [Web Interface]
-Admin --> [Web Interface]
-Developer --> [Web Interface]
-Sponsor --> [Web Interface]
-Educator --> [Web Interface]
-Mentor --> [Web Interface]
-[Web Interface] --> [Application Server]
-[Application Server] --> [Database]
-[Application Server] --> [Authentication Service]
-[Application Server] --> [Payment Gateway]
-[Application Server] --> [Cache Layer]
-@enduml
-```
+## **3. System Architecture**
 
-## 4. Detailed Design
+The architecture includes the following components:
 
-### Component Design
-Each component of the system is designed to fulfill specific functions:
-- **Web Interface**: Provides the user interface for interacting with the platform.
-- **Application Server**: Processes user requests and communicates with other services.
-- **Database**: Stores user data, contest data, and transaction records with optimized indexing and normalization to ensure data consistency and quick retrieval.
-- **Authentication Service**: Manages user login, registration, and session management.
-- **Contest Engine**: Handles the setup, execution, and monitoring of contests.
-- **Judge System**: Evaluates code submissions against predefined test cases.
+- **Frontend**:  
+  Developed using React.js with TailwindCSS for a dynamic, responsive design.
+- **Backend**:  
+  Built with Node.js, Express for API management, and WebSocket for real-time data transfer.
+- **Database**:  
+  PostgreSQL is used with a schema optimized for contests, submissions, and analytics.
+- **Authentication**:  
+  Secure user management through OAuth and JWT.
+- **Judge System**:  
+  Dockerized environment to isolate code execution, integrated with pre-defined test cases.
+- **CI/CD Pipelines**:  
+  Automated deployment pipelines using GitHub Actions and Docker.
 
-### Data Design
-The data design involves defining the schema for the database tables:
-- **Users**: Stores user information, including login credentials and profile data.
-- **Contests**: Stores contest details, including rules, participants, and results.
-- **Submissions**: Stores code submissions, including user ID, contest ID, and evaluation results.
+---
 
-## 5. Activity Diagrams
-The following activity diagrams illustrate key processes within the system:
+## **4. Detailed Design**
 
-### User Registration
-![User Registration](https://github.com/user-attachments/assets/705642a5-2ded-406a-bc07-b9c40dcef319)
+### **4.1 Frontend Interface Design**
+- **Home Page**: Displays contests, leaderboard highlights, and quick links to problem sets.
+- **Contest Page**: Includes timers, rules, and a live scoreboard.
+- **Problem Page**: Features syntax-highlighting editors (e.g., Monaco), live input/output previews, and submission tracking.
+- **Profile Page**: Contains performance metrics, badges, and past submissions.
 
-```plantuml
-@startuml
-start
-:User Accesses Registration Page;
-:Fill Registration Form;
-:Submit Registration Form;
-:Validate Inputs;
-if (Valid Inputs?) then (yes)
-    :Create User Account;
-    :Send Verification Email;
-    :User Account Created;
-else (no)
-    :Show Errors;
-endif
-stop
-@enduml
-```
+### **4.2 Backend Logic**
+- RESTful API endpoints:
+  - `GET /contests`: Fetch available contests.
+  - `POST /submit`: Submit code for evaluation.
+  - `GET /results/{contestId}`: Fetch contest results.
+- WebSocket for real-time updates:
+  - Live scoreboard.
+  - Notifications for submission results.
+- Contest Timer: Centralized contest state management using Redis.
 
-### Contest Participation
-![Contest Participation](https://github.com/user-attachments/assets/36066a0f-a47f-40ee-82d3-caf188c2ee13)
+---
 
-```plantuml
-@startuml
-start
-:User Accesses Contest Page;
-:Select Contest;
-:Pay Entry Fee;
-:Confirm Payment;
-:Enter Contest;
-:Submit Code;
-:Evaluate Code;
-:Receive Results;
-stop
-@enduml
-```
+## **5. User Interface Design**
 
-## 6. Expected Design 
+### **5.1 Key Pages**
+
+#### **Home Page**
+- **Layout**:  
+  - Left: Navigation bar with links to "Contests," "Practice," and "Profile."
+  - Center: Highlighted contests with a timer.
+  - Right: Leaderboard snapshots.
+- **Color Scheme**:  
+  Dark mode default with accent colors in blue and orange for actionable elements.
+
+#### **Contest Interface**
+- **Components**:  
+  - Problem List: Sidebar with question names and statuses (attempted/unattempted).  
+  - Timer: Sticky at the top-right.  
+  - Code Editor: Full-width with language selection.  
+
+#### **Submission Results**
+- Real-time status updates (e.g., "Running," "Accepted," "Wrong Answer").  
+- Pop-up animations for successful submissions.
+
+---
+
+## **6. Backend and Database Design**
+
+### **6.1 Backend Architecture**
+
+- **Core Features**:
+  - Microservice-based structure for scalability.
+  - Worker queues for handling code execution (e.g., RabbitMQ).
+  - Test case caching for commonly solved problems.
+
+### **6.2 Database Schema**
+
+#### Tables:
+- **Users**:  
+  ```sql
+  CREATE TABLE Users (
+    userId SERIAL PRIMARY KEY,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    passwordHash VARCHAR(255) NOT NULL,
+    rating INT DEFAULT 0
+  );
+  ```
+
+- **Contests**:  
+  ```sql
+  CREATE TABLE Contests (
+    contestId SERIAL PRIMARY KEY,
+    title VARCHAR(100) NOT NULL,
+    startTime TIMESTAMP NOT NULL,
+    endTime TIMESTAMP NOT NULL
+  );
+  ```
+
+- **Submissions**:  
+  ```sql
+  CREATE TABLE Submissions (
+    submissionId SERIAL PRIMARY KEY,
+    userId INT REFERENCES Users(userId),
+    contestId INT REFERENCES Contests(contestId),
+    problemId INT NOT NULL,
+    status VARCHAR(50),
+    timestamp TIMESTAMP DEFAULT NOW()
+  );
+  ```
+
+---
+
+
+
+
+## 7. Expected Design 
+
+### **Wireframes**
+- **Home Page**
+  - Banner: Highlights upcoming contests with countdown timers.
+  - Sections: Cards for "Top Participants," "Recent Activity," and "Tutorials."
+
+- **Problem Page**
+  - Left: Problem description.
+  - Right: Code editor with split-pane for input/output.
+
+### **Animations**
+- Buttons: Ripple effects on clicks.
+- Notifications: Slide-in alerts for updates like new contests or submission results.
 
 ### Codeforces Profile
 ![image](https://github.com/user-attachments/assets/bdf1d5f1-e05a-4908-bf7b-88ab825b8b31)
@@ -161,7 +191,15 @@ stop
 
 
 
-## 7. References
+## 8. References
+- **Frontend Frameworks**:  
+  React.js Documentation, TailwindCSS Guides.
+- **Backend Best Practices**:  
+  Node.js Official Documentation.
+- **Database Design**:  
+  PostgreSQL Optimization Techniques.
+- **Real-Time Systems**:  
+  WebSocket Implementation Best Practices.
 - SWEBOK: [Software Engineering Body of Knowledge](https://www.computer.org/education/bodies-of-knowledge/software-engineering/v4)
 - SDD Template: [SDD Template](https://wildart.github.io/MISG5020/standards/SDD_Template.pdf)
 - IEEE 1016: [IEEE Standard for Information Technology](https://standards.ieee.org/ieee/1016/4502/)
