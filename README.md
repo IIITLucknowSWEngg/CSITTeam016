@@ -107,6 +107,9 @@ Each team member has made their initial contributions to the repository. You can
 - **URD.md**: User Requirements Document.
 - **project.md**: Project Scope and Objectives.
 - **stake.md**: Stakeholder Analysis.
+- **Design.md**: Design Analysis.
+- **Survey.md**: Questionaire Analysis.
+- **Architecture.md**: Architecture Analysis.
 
 ## 📝 License
 This project is MIT licensed - see the [LICENSE](LICENSE) file for details.
