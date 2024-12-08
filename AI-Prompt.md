@@ -84,6 +84,12 @@ This document outlines a series of AI-generated prompts intended to assist in cr
 - **Prompt:** "Develop a comprehensive testing plan covering unit tests, integration tests, system tests, and user acceptance tests."
 - **Prompt:** "Specify the criteria for pass/fail outcomes and how defects will be recorded and addressed."
 
+## Others
+
+- **Prompt:** "Improve the documentation language by making it look more professional and easy to read"
+- **Prompt:** "Make the documentation more visually appealing and standard so that it looks production grade document"
+- **Prompt:** "Expain the key terms of SRS files in more detailed manner and remove uncessary details from the entire document"
+
 ## References
 
 - **Prompt:** "Include a list of references used in developing the HashCode platform, such as industry standards, guidelines, and external documentation."
