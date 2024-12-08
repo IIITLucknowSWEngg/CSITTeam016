@@ -110,6 +110,10 @@ The architecture includes the following components:
 
 ### **6.2 Database Schema**
 
+#Architecture->
+![image](https://github.com/user-attachments/assets/8cd0df10-dba2-40c8-8602-c72c48b59038)
+
+
 #### Tables:
 - **Users**:  
   ```sql
