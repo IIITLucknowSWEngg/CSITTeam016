@@ -8,13 +8,13 @@
 
 ## Executive Summary
 
-Hashcode is set to redefine the competitive programming landscape by offering a robust, scalable, and feature-rich platform for developers worldwide. Combining algorithmic rigor with community engagement, it caters to both individual programmers and organizations. Inspired by leading platforms such as Codeforces, LeetCode, and HackerRank, Hashcode bridges gaps in reliability, accessibility, and innovation.
+At Hashcode, we are redefining competitive programming by creating a robust, scalable, and feature-rich platform for developers worldwide. Our goal is to combine algorithmic rigor with community engagement, catering to individual programmers, educators, and organizations. Drawing inspiration from platforms like Codeforces, LeetCode, and HackerRank, we aim to close gaps in reliability, accessibility, and innovation
 
-The platform aims to deliver:
+Here’s what we’re building:
 
-- Seamless hosting of real-time contests
+- A seamless experience for hosting real-time contests
 - Comprehensive tools for learning and assessment
-- A vibrant community fostering collaboration and innovation
+- A vibrant, collaborative programming community
 
 ---
 
@@ -24,22 +24,24 @@ The platform aims to deliver:
 
 The purpose of this document is to articulate the requirements for Hashcode with clarity and precision. It serves as the baseline for development, testing, and deployment while addressing the needs of stakeholders.
 
-**Key Objectives:**
-- Develop a highly reliable platform for live contests.
-- Provide a comprehensive learning hub for algorithmic problem-solving
-- Foster a collaborative community of programmers
-- Enable organizations to conduct technical assessments efficiently
+**What we aim to achieve:**
+
+- Build a reliable platform for live contests.
+- Provide a comprehensive learning hub for algorithmic problem-solving.
+- Foster collaboration and innovation within our community.
+- Enable organizations to conduct technical assessments with ease.
 
 
-**Scope**
-- Individual problem-solving with analytics and progress tracking.
-- Diverse contest formats with real-time scoring.
-- Organizational needs, such as candidate evaluation and bulk testing.
-- Educational tools for instructors and learners.
+**What Hashcode will include:**
+
+- Tools for individual problem-solving with progress tracking.
+- A variety of contest formats with real-time scoring.
+- Solutions for organizations needing candidate evaluation and bulk testing.
+- Educational resources for instructors and learners.
 
 ### 1.2 Market Context
 
-The competitive programming platform market has seen significant growth:
+The demand for competitive programming platforms is growing rapidly, fueled by the increasing need for technical skills, coding interviews, and remote assessments.
 
 ```mermaid
 graph LR
@@ -118,7 +120,8 @@ sequenceDiagram
     S->>U: Confirm Registration
 ```
 
-**Required Features for contest creation:**
+We’re building a robust contest management system. Here’s what it includes:
+
 1. Contest scheduling with timezone support
 2. Multiple contest formats:
    - Standard (2-3 hours)
@@ -126,15 +129,14 @@ sequenceDiagram
    - Short Sprint (30-60 minutes)
 3. Customizable scoring systems
 
-**Required Features for Participant Management:**
-1. Pre-registration and waitlisting
-2. Automated reminders and notifications
+
+We’re also making it easy for participants with pre-registration, waitlisting, and automated reminders.
 
 ### 4.2 Code Submission System 🔴
 
 #### 4.2.1 Submission Interface
 
-The platform must support a robust code submission system with the following capabilities:
+For code submission, we’re focusing on reliability and speed. Submissions will have:
 
 ```javascript
 interface SubmissionRequirements {
@@ -168,7 +170,7 @@ graph TD
 
 #### 4.3.1 Problem Page Layout
 
-The problem page must follow this structured layout:
+Here’s how the problem page will look:
 
 ```
 ┌────────────────────────────────────────┐
@@ -250,7 +252,7 @@ graph LR
 
 ### 6.1 External System Integration
 
-The platform must integrate with:
+Our platform will integrate with tools you already use:
 
 1. **Version Control Systems**
    - GitHub
@@ -270,6 +272,8 @@ The platform must integrate with:
 ---
 
 ## 7. Maintenance and Support 🟢
+
+We’ll monitor system health 24/7, provide technical support for critical issues, and moderate community forums. Maintenance will be scheduled during off-peak hours.
 
 ### 7.1 System Monitoring
 
@@ -293,6 +297,8 @@ graph TD
 ---
 
 ## 8. Future Considerations 🟢
+
+We’re planning:
 
 ### 8.1 Planned Features
 
