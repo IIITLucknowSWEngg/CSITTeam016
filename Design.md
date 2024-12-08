@@ -57,21 +57,103 @@ The architecture includes the following components:
 
 ## **4. Detailed Design**
 
-### **4.1 Frontend Interface Design**
-- **Home Page**: Displays contests, leaderboard highlights, and quick links to problem sets.
-- **Contest Page**: Includes timers, rules, and a live scoreboard.
-- **Problem Page**: Features syntax-highlighting editors (e.g., Monaco), live input/output previews, and submission tracking.
-- **Profile Page**: Contains performance metrics, badges, and past submissions.
+### 4.1 Frontend Interface Design  
 
-### **4.2 Backend Logic**
-- RESTful API endpoints:
-  - `GET /contests`: Fetch available contests.
-  - `POST /submit`: Submit code for evaluation.
-  - `GET /results/{contestId}`: Fetch contest results.
-- WebSocket for real-time updates:
-  - Live scoreboard.
-  - Notifications for submission results.
-- Contest Timer: Centralized contest state management using Redis.
+1. **Home Page**  
+   - **Description**: The main landing page providing a comprehensive overview of the platform.  
+   - **Features**:  
+     - **Contest Highlights**: Displays ongoing and upcoming contests with quick links to join or view details.  
+     - **Leaderboard Snippets**: Showcases top-performing contestants in real-time.  
+     - **Quick Links**: Navigation to curated problem sets, trending problems, and tutorials for practice.  
+     - **Search Bar**: Allows users to search for specific contests, problems, or users.  
+
+2. **Contest Page**  
+   - **Description**: A dedicated page for each contest.  
+   - **Features**:  
+     - **Contest Timer**: Real-time countdown to contest start and end.  
+     - **Rules and Guidelines**: Detailed instructions for contestants.  
+     - **Live Scoreboard**: Continuously updated with participant rankings, scores, and problem-wise performance.  
+     - **Problem List**: Clickable links to the problems included in the contest.  
+
+3. **Problem Page**  
+   - **Description**: The core interface for solving programming problems.  
+   - **Features**:  
+     - **Syntax-Highlighting Code Editor**: Powered by Monaco, with autocomplete and error detection.  
+     - **Live Input/Output Preview**: Real-time feedback for custom test cases.  
+     - **Submission Tracker**: Displays past attempts, their statuses, and scores.  
+     - **Hints and Resources**: Optional section providing curated hints and related reading material.  
+
+4. **Profile Page**  
+   - **Description**: User-centric page highlighting personal progress and achievements.  
+   - **Features**:  
+     - **Performance Metrics**: Graphical representation of contest scores, rankings, and problem-solving history.  
+     - **Badges**: Visual representation of milestones and achievements.  
+     - **Past Submissions**: Chronological list of all submissions with links to view details and explanations.  
+
+---
+
+### 4.2 Backend Logic  
+
+1. **RESTful API Endpoints**  
+
+   - **Contest Management**:  
+     - `GET /contests`: Fetch a list of all active, upcoming, and completed contests.  
+     - `GET /contests/{contestId}`: Fetch details of a specific contest.  
+     - `POST /contests`: Create a new contest (admin only).  
+     - `PUT /contests/{contestId}`: Update contest details (admin only).  
+     - `DELETE /contests/{contestId}`: Delete a contest (admin only).  
+
+   - **Problem Management**:  
+     - `GET /problems`: Fetch a list of all problems.  
+     - `GET /problems/{problemId}`: Retrieve details of a specific problem.  
+     - `POST /problems`: Create a new problem (admin only).  
+     - `PUT /problems/{problemId}`: Update problem details (admin only).  
+     - `DELETE /problems/{problemId}`: Delete a problem (admin only).  
+
+   - **Submission Handling**:  
+     - `POST /submit`: Submit code for evaluation.  
+     - `GET /submissions/{submissionId}`: Fetch details of a specific submission.  
+     - `GET /submissions`: List all submissions for a user or contest.  
+
+   - **Leaderboard and Results**:  
+     - `GET /leaderboards/{contestId}`: Retrieve the leaderboard for a specific contest.  
+     - `GET /results/{contestId}`: Fetch the results for a specific contest.  
+
+   - **User Profile**:  
+     - `GET /profile`: Fetch details of the currently authenticated user.  
+     - `PUT /profile`: Update user profile information.  
+     - `GET /profile/{userId}`: Fetch details of another user (limited data).  
+
+   - **Authentication**:  
+     - `POST /register`: Register a new user.  
+     - `POST /login`: Log in a user and issue a token.  
+     - `POST /logout`: Invalidate the current session token.  
+
+2. **WebSocket for Real-Time Updates**  
+
+   - **Live Scoreboard**:  
+     - Enables real-time updates to contest leaderboards.  
+     - Pushes changes in rank and scores as soon as submissions are evaluated.  
+
+   - **Submission Notifications**:  
+     - Notifies users of the status of their submissions (e.g., "Accepted," "Runtime Error").  
+
+   - **Admin Announcements**:  
+     - Real-time announcements or alerts during contests (e.g., problem clarifications).  
+
+3. **Contest Timer**  
+   - **Description**: Centralized management of contest timing and state.  
+   - **Implementation**:  
+     - **Redis**: Used to store contest states and ensure consistent updates across multiple servers.  
+     - **Logic**:  
+       - Triggers actions like contest start/end notifications, locking/unlocking problem sets, and freezing scoreboards before the contest ends.  
+
+4. **Background Jobs**  
+   - **Code Evaluation**:  
+     - Handles submission processing asynchronously.  
+     - Uses a job queue for execution, result generation, and updating scores.  
+   - **Audit Logging**:  
+     - Records user actions such as submissions, profile updates, and problem views for analytics and compliance.  
 
 ---
 
