@@ -244,6 +244,8 @@ The architecture includes the following components:
   React.js Documentation, TailwindCSS Guides.
 - **Backend Best Practices**:  
   Node.js Official Documentation.
+  Rust Official Doucmentation
+  Golang Official Documentation
 - **Database Design**:  
   PostgreSQL Optimization Techniques.
 - **Real-Time Systems**:  
